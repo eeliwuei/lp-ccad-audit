@@ -16,7 +16,7 @@ authors:
     given-names: "Seojin"
     affiliation: "DeepFarm Inc., Seoul, Republic of Korea"
     email: "seojinygud@deepfarm.net"
-license-url: "LICENSE_PENDING"
+license-url: "https://github.com/eeliwuei/lp-ccad-audit/blob/main/LICENSE"
 keywords:
   - knowledge distillation
   - object detection
@@ -38,3 +38,4 @@ preferred-citation:
   journal: "Machine Learning with Applications"
   year: 2026
   notes: "Preprint / under review; volume, pages and DOI to be added on acceptance."
+license: MIT

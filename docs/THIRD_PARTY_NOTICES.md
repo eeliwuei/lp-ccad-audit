@@ -61,7 +61,9 @@ this repository under any licence.
 
 ## Licence of this repository
 
-Not yet fixed — see `LICENSE_PENDING` at the repository root. The short version:
+MIT — see `LICENSE` at the repository root. The short version:
 this code is standalone and interfaces with AGPL-3.0 Ultralytics only at
-arm's length, so MIT, BSD-3-Clause and Apache-2.0 are all viable choices and
-the decision is reserved to the authors.
+arm's length (no upstream source is vendored, imported or redistributed), so
+no upstream licence forces a copyleft outcome and MIT applies cleanly. The
+licence covers this repository's code, configs and result tables only; the
+constituent datasets keep their own terms (see DATA_PROVENANCE.md).

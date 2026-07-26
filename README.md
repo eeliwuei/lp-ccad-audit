@@ -142,10 +142,12 @@ when the DOI is issued.
 
 ## License
 
-Not yet fixed — see [`LICENSE_PENDING`](LICENSE_PENDING). The repository code is
-standalone and interfaces with AGPL-3.0 Ultralytics only at arm's length, so
-MIT, BSD-3-Clause and Apache-2.0 are all viable; the choice is reserved to the
-authors.
+MIT — see [`LICENSE`](LICENSE). The licence covers **this repository's code,
+configs and result tables only**. It does not and cannot relicense the
+constituent datasets, which remain governed by their own terms (see
+[docs/DATA_PROVENANCE.md](docs/DATA_PROVENANCE.md)); no imagery, labels or
+model weights are distributed here.
+
 
 ## Acknowledgements
 
