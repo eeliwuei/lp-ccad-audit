@@ -301,6 +301,69 @@ def locked_test_contrasts() -> None:
     print()
 
 
+
+BOOT_CONTRASTS = [
+    ("H1", "C4-M", "C1-M", ["42", "1337", "20260703"]),
+    ("H2", "C4-M", "C4MixFT-M", ["42", "1337"]),
+    ("H3", "C4MixFT-M", "C4Mix-M", ["42", "1337"]),
+    ("H4", "C4-M", "C4R-M", ["42", "1337"]),
+    ("H5", "C1-M", "C0-R", ["42", "1337", "20260703"]),
+]
+# The frozen decision rule registers SEVEN confirmatory contrasts (H6 counts
+# twice). The bootstrap covers the five mainline ones; Holm is applied over
+# the registered family size, which is the conservative choice.
+FROZEN_FAMILY = 7
+
+
+def bootstrap_p_values() -> None:
+    """Achieved significance level for each bootstrapped contrast.
+
+    The percentile intervals answer "where is the contrast"; they are not a
+    test of H0: delta = 0. For a test we shift each replicate distribution to
+    its null mean and count the two-sided tail beyond the observed contrast --
+    the bootstrap analogue of a permutation p. The uncentred proportion of
+    replicates on the far side of zero (which an earlier draft reported) is
+    NOT a valid p-value, and both are printed here so the difference is
+    visible rather than argued about.
+    """
+    rows = read_csv("bootstrap_replicates.csv")
+    if not rows:
+        print("bootstrap_replicates.csv missing; skipping p-values")
+        return
+    obs = {r["contrast"]: float(r["mean_delta"])
+           for r in read_csv("locked_test_contrast_means.csv")}
+    print(rule("="))
+    print("LOCKED-TEST BOOTSTRAP: ACHIEVED SIGNIFICANCE LEVELS")
+    print(f"        B = {len(rows)}; Holm over the frozen family of {FROZEN_FAMILY}")
+    print(rule("="))
+    print(f"{'contrast':10}{'observed':>11}{'boot mean':>11}"
+          f"{'uncentred':>11}{'centred p':>11}")
+    print(rule())
+    raw = {}
+    for key, a, b, seeds in BOOT_CONTRASTS:
+        deltas = []
+        for r in rows:
+            d = sum(float(r[f"{a}@{s}"]) - float(r[f"{b}@{s}"]) for s in seeds)
+            deltas.append(d / len(seeds))
+        n = len(deltas)
+        mean = sum(deltas) / n
+        t = obs[key]
+        uncentred = 2 * min(sum(1 for x in deltas if x <= 0),
+                            sum(1 for x in deltas if x >= 0)) / n
+        centred = (sum(1 for x in deltas if abs(x - mean) >= abs(t)) + 1) / (n + 1)
+        raw[key] = centred
+        print(f"{key:10}{t:>+11.5f}{mean:>+11.5f}{uncentred:>11.3f}{centred:>11.3f}")
+    order = sorted(raw.items(), key=lambda kv: kv[1])
+    running, holm = 0.0, {}
+    for i, (k, p) in enumerate(order):
+        running = max(running, min(1.0, p * (FROZEN_FAMILY - i)))
+        holm[k] = running
+    print(rule())
+    print("Holm-adjusted: " + "  ".join(f"{k}={holm[k]:.3f}" for k in sorted(holm)))
+    print("no contrast survives correction; H1 is 'at most zero, not resolved'.")
+    print()
+
+
 def main() -> int:
     runs = load_runs()
     stats = {k: effect_stats([effects_within_seed(runs, s)[k] for s in SEEDS]) for k in EFFECTS}
@@ -315,6 +378,7 @@ def main() -> int:
     locked_test_arms()
     locked_test_contrasts()
     table_bootstrap()
+    bootstrap_p_values()
     print("done. See docs/EXPECTED_OUTPUTS.md for the values this should print.")
     return 0
 

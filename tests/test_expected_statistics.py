@@ -16,6 +16,7 @@ REPO = Path(__file__).resolve().parents[1]
 RUNS = REPO / "results/factorial_runs.csv"
 METRICS = REPO / "results/paper_metrics.csv"
 BASELINE = REPO / "results/c0r_val_baseline.csv"
+RESULTS_DIR = REPO / "results"
 
 SEEDS = [42, 1337, 20260703]
 CELLS = ["mono_single", "mono_mixed", "shuf_single", "shuf_mixed"]
@@ -132,3 +133,43 @@ def test_locked_test_contrast_means_match_the_paper():
         mean = sum(vals) / len(vals)
         assert abs(mean - expected[key]) < 5e-5, f"{key}: {mean:.5f} vs paper {expected[key]}"
         assert abs(mean) < eps_test, f"{key}: |{mean:.5f}| now clears eps_test={eps_test}"
+
+
+def test_bootstrap_achieved_significance_levels():
+    """The bootstrap p-values the manuscript reports must be computable here.
+
+    An earlier draft quoted p = 0.046 / 0.23 with no released computation
+    behind them; the uncentred proportion of replicates crossing zero is not a
+    test of H0: delta = 0. The manuscript now reports the achieved significance
+    level (replicates shifted to the null mean, two-sided tail beyond the
+    observed contrast) and Holm over the frozen family of SEVEN registered
+    contrasts, not five. This test pins both.
+    """
+    reps = list(csv.DictReader((RESULTS_DIR / "bootstrap_replicates.csv").open(newline="")))
+    obs = {r["contrast"]: float(r["mean_delta"]) for r in
+           csv.DictReader((RESULTS_DIR / "locked_test_contrast_means.csv").open(newline=""))}
+    assert len(reps) == 1000
+    pairs = {
+        "H1": ("C4-M", "C1-M", ["42", "1337", "20260703"]),
+        "H2": ("C4-M", "C4MixFT-M", ["42", "1337"]),
+        "H3": ("C4MixFT-M", "C4Mix-M", ["42", "1337"]),
+        "H4": ("C4-M", "C4R-M", ["42", "1337"]),
+        "H5": ("C1-M", "C0-R", ["42", "1337", "20260703"]),
+    }
+    expected = {"H1": 0.037, "H2": 0.113, "H3": 0.301, "H4": 0.332, "H5": 0.713}
+    raw = {}
+    for key, (a, b, seeds) in pairs.items():
+        d = [sum(float(r[f"{a}@{s}"]) - float(r[f"{b}@{s}"]) for s in seeds) / len(seeds)
+             for r in reps]
+        mean = sum(d) / len(d)
+        t = obs[key]
+        p = (sum(1 for x in d if abs(x - mean) >= abs(t)) + 1) / (len(d) + 1)
+        raw[key] = p
+        assert abs(p - expected[key]) < 1e-3, f"{key}: {p:.4f} vs paper {expected[key]}"
+    order = sorted(raw.items(), key=lambda kv: kv[1])
+    running, holm = 0.0, {}
+    for i, (k, p) in enumerate(order):
+        running = max(running, min(1.0, p * (7 - i)))
+        holm[k] = running
+    assert abs(holm["H1"] - 0.259) < 1e-3, holm["H1"]
+    assert all(v > 0.05 for v in holm.values()), "a contrast now survives Holm"

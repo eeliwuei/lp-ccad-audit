@@ -1,0 +1,6 @@
+contrast,arm_a,arm_b,n_seeds,mean_delta
+H1,C4-M,C1-M,3,-0.00853
+H2,C4-M,C4MixFT-M,2,-0.00911
+H3,C4MixFT-M,C4Mix-M,2,0.00530
+H4,C4-M,C4R-M,2,-0.00508
+H5,C1-M,C0-R,3,0.00161
