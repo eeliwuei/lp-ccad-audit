@@ -13,8 +13,8 @@ No dataset, no checkpoint, no GPU, no network. Python 3.9+ standard library.
 | Table 10 (factorial effects, paired-$t$ CIs, TOST, Holm) | `python3 scripts/reproduce_tables.py` | stdlib only |
 | Table 11 (twelve raw runs, C0-R row, paired diffs, seed-blocked contrasts) | same command | stdlib only |
 | Table 7(a) locked-test primaries (every mainline arm at every replicated seed) | same command | stdlib only |
-| Table 7(b) per-seed contrasts H1-H5, their means and the eps_test verdicts | same command | stdlib only |
-| Source-clustered bootstrap intervals | same command | stdlib only |
+| Table 7(b) per-seed contrasts H1-H6 (seven registered contrasts), their means and the eps_test verdicts | same command | stdlib only |
+| Frozen source-clustered bootstrap intervals and ASLs recomputed from the released replicate table | same command | stdlib only |
 | Schedule dose-match invariant (all nine randomized arms vs C4-M) | `python3 -m pytest tests/test_schedule_multiset.py -q` | pytest (PyYAML optional) |
 | The published contrasts recomputed from the raw runs | `python3 -m pytest tests/test_expected_statistics.py -q` | pytest |
 | Why the bootstrap must renumber cloned ids | `python3 -m pytest tests/test_bootstrap_duplicate_ids.py -q` | pytest + faster-coco-eval (skips otherwise) |
@@ -22,10 +22,18 @@ No dataset, no checkpoint, no GPU, no network. Python 3.9+ standard library.
 | Figures 5B, locked-test contrasts, per-arm locked-test panel | `python3 scripts/reproduce_figures.py` | matplotlib (prints the numbers instead if absent) |
 | Human-readable schedule ledger | `python3 scripts/verify_schedule_exposure.py` | PyYAML |
 
-Every number printed by `reproduce_tables.py` is recomputed live from
-`results/factorial_runs.csv` and `results/c0r_val_baseline.csv`; the
-manuscript's own values in `results/paper_metrics.csv` are only *compared
-against*, so a discrepancy is visible rather than hidden. Expected output is in
+`reproduce_tables.py` has three explicit evidence paths:
+
+* factorial effects, intervals and TOST/Holm results are recomputed from
+  `results/factorial_runs.csv` and `results/c0r_val_baseline.csv`;
+* locked-test arm values and registered contrasts are recomputed from the
+  released locked-test CSVs;
+* bootstrap confidence intervals are read from the frozen
+  `results/bootstrap_summary.csv`, while achieved significance levels are
+  recomputed from `results/bootstrap_replicates.csv`.
+
+The manuscript's headline values in `results/paper_metrics.csv` are used as
+cross-checks rather than computational inputs. Expected output is in
 [EXPECTED_OUTPUTS.md](EXPECTED_OUTPUTS.md).
 
 ## Tier 2 — needs the restricted corpus and GPUs
@@ -77,4 +85,6 @@ raises an ABI error, that is the first thing to check.
   are deterministic across machines.
 * The bootstrap CIs in `results/bootstrap_summary.csv` are *not* recomputed
   here — they are the output of a 1000-replicate run over the restricted
-  locked-test artifacts (seed 20260725). Re-running them requires Tier 2.
+  locked-test artifacts (seed 20260725). Re-running the evaluator requires
+  Tier 2. The released replicate table is sufficient to recompute the reported
+  achieved significance levels.
