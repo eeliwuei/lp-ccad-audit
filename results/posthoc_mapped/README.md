@@ -8,7 +8,7 @@ was neither read-for-arming nor modified, and nothing under `../phase4_test_lock
 Every number below is a deterministic function of files that already existed before this date.
 
 **Why it was needed.** The frozen decision rule
-`../../configs/phase4_decision_rule_v1.yaml` (`four_part_hypothesis_metric_mapping`,
+`../../configs/frozen_protocol/phase4_decision_rule_v1.yaml` (`four_part_hypothesis_metric_mapping`,
 lines 87-98; sha256 `e82c7bbd...4841472`) requires four mapped secondary outcomes to be
 reported for *every* confirmatory contrast. The consumption event of 2026-07-20
 (`tools/ccad_ops/phase4_test_executor.py`, sha256 `5603bd8b...03e1e24`) ran, per arm, only:

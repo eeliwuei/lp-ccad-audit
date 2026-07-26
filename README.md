@@ -16,7 +16,7 @@ flowchart TD
     A["LP-CCAD: class-distillation loss<br/>projected onto a time-indexed<br/>active-class view"] --> B["Frozen nine-arm protocol<br/>prospective, multi-seed"]
     B --> C["Validation, 3 seeds<br/>ordering contrast keeps its sign<br/>mean +0.0091, below the<br/>frozen noise floor 0.0171"]
     C --> D{"Locked test<br/>single consumed pass"}
-    D -->|"no contrast clears<br/>the frozen noise floor"| E["NULL under source shift"]
+    D -->|"no contrast clears<br/>the frozen noise floor"| E["NON-CONFIRMATION<br/>under source shift"]
     C --> F["Randomized 2x2 follow-up<br/>ORDER x TAIL, nominal-exposure<br/>matched, 4 cells x 3 seeds"]
     F --> G{"Seed-blocked contrasts<br/>paired-t, SESOI = 0.01"}
     G -->|"order -0.00104<br/>CI crosses zero"| H["Signal does not reappear"]

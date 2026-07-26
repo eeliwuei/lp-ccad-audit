@@ -1,0 +1,37 @@
+{
+ "image_count_test": 2553,
+ "gt_annotations_test": 2088,
+ "reference_fp_per_image_C0Std": 0.05235231694375663,
+ "q25_thresholds_path": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/size_thresholds_train.json",
+ "q25_thresholds_sha256": "da33e3612e79816b250f7cd3b11d6d07e8065ab44eff4baaeefcc1d3158470cc",
+ "q25_thresholds": {
+  "1": {
+   "class_name": "knife",
+   "train_gt_count": 3656,
+   "q25_area_ratio": 0.013767246528000005
+  },
+  "2": {
+   "class_name": "gun",
+   "train_gt_count": 5514,
+   "q25_area_ratio": 0.01307373046875
+  },
+  "3": {
+   "class_name": "stick",
+   "train_gt_count": 525,
+   "q25_area_ratio": 0.045893399999999994
+  }
+ },
+ "q25_test_target_counts": {
+  "2": 275,
+  "1": 58,
+  "3": 36
+ },
+ "anchor": {
+  "arm": "C4-M@42 primary",
+  "recomputed_map50_95": 0.4043930717327209,
+  "expected_round5": 0.40439,
+  "match": true,
+  "evaluator": "faster-coco-eval"
+ },
+ "missing": []
+}

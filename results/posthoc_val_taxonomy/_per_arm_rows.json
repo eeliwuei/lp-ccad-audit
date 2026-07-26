@@ -1,0 +1,1187 @@
+[
+ {
+  "arm": "C0-R",
+  "seed": "42",
+  "run": "C0-R_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C0-R_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C0-R_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "bb851ecef7cac433e93247dbf27a9b50fcf1c71ac9ec932bec4bdab67d05f908",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C0-R_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "6af0668c6c7f6c9c9c0cf2da0d0816d91a6a75c9818e083d35861ff7e3913d42",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.37723,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1011,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 36,
+  "taxonomy_background_or_spurious_per_image": 0.012734347364697559,
+  "taxonomy_partial_wrong_overlap": 4,
+  "alt_background_plus_partial_count": 40,
+  "alt_background_plus_partial_per_image": 0.014149274849663955,
+  "taxonomy_true_positive": 863,
+  "taxonomy_duplicate": 32,
+  "taxonomy_class_confusion": 23,
+  "taxonomy_localization_error": 53,
+  "taxonomy_FN": 1288,
+  "freeze_record_background_fp": 36,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.401208740120874,
+  "val_op_p90_fp_per_image": 0.0314821365405023,
+  "val_map75": 0.3942909631851025,
+  "val_q25_macro_recall_iou50": 0.31312103788883977,
+  "val_mean_matched_iou": 0.8056968364234518,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 9
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 2
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 16,
+   "gun": 36,
+   "stick": 1
+  }
+ },
+ {
+  "arm": "C0-R",
+  "seed": "1337",
+  "run": "C0-R_seed1337_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C0-R_seed1337_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C0-R_seed1337_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "f4bd5fa8e53f1e5529346ce127e39cf861bfa60a07fe507dcb64bf365bf40a82",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C0-R_seed1337_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "fad3ecf89848d3247d085ce2bb07221292974af167d091d7033e19c6df230f3a",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.35283,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1028,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 46,
+  "taxonomy_background_or_spurious_per_image": 0.01627166607711355,
+  "taxonomy_partial_wrong_overlap": 1,
+  "alt_background_plus_partial_count": 47,
+  "alt_background_plus_partial_per_image": 0.016625397948355148,
+  "taxonomy_true_positive": 880,
+  "taxonomy_duplicate": 23,
+  "taxonomy_class_confusion": 23,
+  "taxonomy_localization_error": 55,
+  "taxonomy_FN": 1271,
+  "freeze_record_background_fp": 46,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.40911204091120407,
+  "val_op_p90_fp_per_image": 0.030420940926777502,
+  "val_map75": 0.40640800497627355,
+  "val_q25_macro_recall_iou50": 0.31986338395007125,
+  "val_mean_matched_iou": 0.8087899284291342,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 8
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 6
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 2
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 2
+   }
+  ],
+  "_localization_errors_by_class": {
+   "gun": 32,
+   "knife": 20,
+   "stick": 3
+  }
+ },
+ {
+  "arm": "C0-R",
+  "seed": "20260703",
+  "run": "C0-R_seed20260703_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C0-R_seed20260703_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C0-R_seed20260703_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "a5dde823d883a5e22f613e0919bf3cd072cd9f29898d73b14e94a8a35fd99498",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C0-R_seed20260703_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "c2ed489910968ae7ece2f050f61c699163d4771800f56ba3bfc5c8800106e094",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.40404,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1003,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 40,
+  "taxonomy_background_or_spurious_per_image": 0.014149274849663955,
+  "taxonomy_partial_wrong_overlap": 3,
+  "alt_background_plus_partial_count": 43,
+  "alt_background_plus_partial_per_image": 0.015210470463388751,
+  "taxonomy_true_positive": 855,
+  "taxonomy_duplicate": 29,
+  "taxonomy_class_confusion": 25,
+  "taxonomy_localization_error": 51,
+  "taxonomy_FN": 1296,
+  "freeze_record_background_fp": 40,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.39748953974895396,
+  "val_op_p90_fp_per_image": 0.02865228157056951,
+  "val_map75": 0.3989680038797495,
+  "val_q25_macro_recall_iou50": 0.3305420413779547,
+  "val_mean_matched_iou": 0.8064289315397823,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 8
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 6
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "stick": 4,
+   "gun": 32,
+   "knife": 15
+  }
+ },
+ {
+  "arm": "C1-M",
+  "seed": "42",
+  "run": "C1-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C1-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C1-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "9c40ca5c8a6f90c5f595893006b4b61b342354abd607047fd5846b0ce8ae8de0",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C1-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "aef72ca624ad2f5271fa14100e6a1a2fe610fb9051a8916e346e95d80ac317fc",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.39646,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1030,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 39,
+  "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+  "taxonomy_partial_wrong_overlap": 3,
+  "alt_background_plus_partial_count": 42,
+  "alt_background_plus_partial_per_image": 0.014856738592147152,
+  "taxonomy_true_positive": 882,
+  "taxonomy_duplicate": 28,
+  "taxonomy_class_confusion": 23,
+  "taxonomy_localization_error": 55,
+  "taxonomy_FN": 1269,
+  "freeze_record_background_fp": 39,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.4100418410041841,
+  "val_op_p90_fp_per_image": 0.0307746727980191,
+  "val_map75": 0.41532648032308245,
+  "val_q25_macro_recall_iou50": 0.32578013661604993,
+  "val_mean_matched_iou": 0.8099252559070235,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 10
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 2
+   },
+   {
+    "gt": "stick",
+    "pred": "gun",
+    "count": 1
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 1
+   }
+  ],
+  "_localization_errors_by_class": {
+   "stick": 2,
+   "knife": 19,
+   "gun": 34
+  }
+ },
+ {
+  "arm": "C1-M",
+  "seed": "1337",
+  "run": "C1-M_seed1337_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C1-M_seed1337_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C1-M_seed1337_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "a802b0fc290fed69fb600eca92ab69e3f5fafbc3d93854c459ed7ecd2ca5c520",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C1-M_seed1337_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "a9ede8e679af9557fc42dacf7a2dd2b41f0c3cc77cf8ff3ef3d21749a7675a6c",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.39841,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1044,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 34,
+  "taxonomy_background_or_spurious_per_image": 0.012026883622214362,
+  "taxonomy_partial_wrong_overlap": 2,
+  "alt_background_plus_partial_count": 36,
+  "alt_background_plus_partial_per_image": 0.012734347364697559,
+  "taxonomy_true_positive": 896,
+  "taxonomy_duplicate": 30,
+  "taxonomy_class_confusion": 18,
+  "taxonomy_localization_error": 64,
+  "taxonomy_FN": 1255,
+  "freeze_record_background_fp": 34,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.4165504416550442,
+  "val_op_p90_fp_per_image": 0.0307746727980191,
+  "val_map75": 0.4081244148379166,
+  "val_q25_macro_recall_iou50": 0.3314560912084132,
+  "val_mean_matched_iou": 0.8030386169534062,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 3
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "gun": 33,
+   "knife": 29,
+   "stick": 2
+  }
+ },
+ {
+  "arm": "C1-M",
+  "seed": "20260703",
+  "run": "C1-M_seed20260703_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C1-M_seed20260703_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C1-M_seed20260703_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "605cd6d0c87fdc9e54582cdd72b54c7f5f4b4caeb907a43c0789d17be8ac5bbb",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C1-M_seed20260703_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "160d2209dd289161f14a455d1a8b84a06b6c2b458052f5ebee0b74007d56f4b4",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.39365,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 984,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 22,
+  "taxonomy_background_or_spurious_per_image": 0.007782101167315175,
+  "taxonomy_partial_wrong_overlap": 3,
+  "alt_background_plus_partial_count": 25,
+  "alt_background_plus_partial_per_image": 0.008843296781039971,
+  "taxonomy_true_positive": 836,
+  "taxonomy_duplicate": 28,
+  "taxonomy_class_confusion": 28,
+  "taxonomy_localization_error": 67,
+  "taxonomy_FN": 1315,
+  "freeze_record_background_fp": 22,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.3886564388656439,
+  "val_op_p90_fp_per_image": 0.029359745313052705,
+  "val_map75": 0.3833906003055699,
+  "val_q25_macro_recall_iou50": 0.29581797631333234,
+  "val_mean_matched_iou": 0.8016606733275569,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 8
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 7
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 5
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 5
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "stick": 4,
+   "knife": 24,
+   "gun": 39
+  }
+ },
+ {
+  "arm": "C2-M",
+  "seed": "42",
+  "run": "C2-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C2-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C2-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "e81baf46aa8aa9ff5b764bdd33e0df44f998a57fd7a775b955be00160558264a",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C2-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "3abfea5f6bc72baaa313ab9a7f8eebee73d2323d0891c219cc17576716f093e0",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.28915,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1007,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 37,
+  "taxonomy_background_or_spurious_per_image": 0.013088079235939158,
+  "taxonomy_partial_wrong_overlap": 1,
+  "alt_background_plus_partial_count": 38,
+  "alt_background_plus_partial_per_image": 0.013441811107180757,
+  "taxonomy_true_positive": 859,
+  "taxonomy_duplicate": 36,
+  "taxonomy_class_confusion": 23,
+  "taxonomy_localization_error": 51,
+  "taxonomy_FN": 1292,
+  "freeze_record_background_fp": 37,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.399349139934914,
+  "val_op_p90_fp_per_image": 0.029713477184294304,
+  "val_map75": 0.40078197302973145,
+  "val_q25_macro_recall_iou50": 0.31240355791439384,
+  "val_mean_matched_iou": 0.8066412444480797,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 10
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 6
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 4
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 2
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 1
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 20,
+   "gun": 28,
+   "stick": 3
+  }
+ },
+ {
+  "arm": "C3-M",
+  "seed": "42",
+  "run": "C3-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C3-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C3-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "d2d13987f990b19b676177016c008f504217ac98eda046d5e95718e3842f4b63",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C3-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "774e0cba484d2ff86f725c26ea2c826590fcc867f9a1555c7ac447439e3b75fa",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.44026,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 977,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 32,
+  "taxonomy_background_or_spurious_per_image": 0.011319419879731164,
+  "taxonomy_partial_wrong_overlap": 0,
+  "alt_background_plus_partial_count": 32,
+  "alt_background_plus_partial_per_image": 0.011319419879731164,
+  "taxonomy_true_positive": 829,
+  "taxonomy_duplicate": 42,
+  "taxonomy_class_confusion": 30,
+  "taxonomy_localization_error": 44,
+  "taxonomy_FN": 1322,
+  "freeze_record_background_fp": 32,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.3854021385402139,
+  "val_op_p90_fp_per_image": 0.029359745313052705,
+  "val_map75": 0.38596917109363577,
+  "val_q25_macro_recall_iou50": 0.29811784362867955,
+  "val_mean_matched_iou": 0.80345618142758,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 8
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 8
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 7
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "gun": 26,
+   "knife": 17,
+   "stick": 1
+  }
+ },
+ {
+  "arm": "CBox-M",
+  "seed": "42",
+  "run": "CBox-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/CBox-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/CBox-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "77e0ef10de2fbfebe0741592434aaca42f826420859751d27127889ca671754a",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/CBox-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "8e5269b7ea14b6264b23afdfd0207ab7ed28beed40156d2693e6fa6ccc5ac132",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.38791,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1015,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 39,
+  "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+  "taxonomy_partial_wrong_overlap": 1,
+  "alt_background_plus_partial_count": 40,
+  "alt_background_plus_partial_per_image": 0.014149274849663955,
+  "taxonomy_true_positive": 867,
+  "taxonomy_duplicate": 28,
+  "taxonomy_class_confusion": 18,
+  "taxonomy_localization_error": 62,
+  "taxonomy_FN": 1284,
+  "freeze_record_background_fp": 39,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.403068340306834,
+  "val_op_p90_fp_per_image": 0.0311284046692607,
+  "val_map75": 0.4019152775415201,
+  "val_q25_macro_recall_iou50": 0.3395498550297312,
+  "val_mean_matched_iou": 0.8025457434074497,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 5
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 2
+   },
+   {
+    "gt": "stick",
+    "pred": "gun",
+    "count": 1
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 20,
+   "stick": 3,
+   "gun": 39
+  }
+ },
+ {
+  "arm": "C4-M",
+  "seed": "42",
+  "run": "C4-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "40e366367f83fcba7a5f8bf1c17b81b9fe99f90d1fc35f80fa4768b23b29aee4",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "3f1f7ab1eccedf95f4ed33d78f75ca7564ef03b4a0eb98fe8dc4121d62721d95",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.49152,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1013,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 27,
+  "taxonomy_background_or_spurious_per_image": 0.00955076052352317,
+  "taxonomy_partial_wrong_overlap": 3,
+  "alt_background_plus_partial_count": 30,
+  "alt_background_plus_partial_per_image": 0.010611956137247965,
+  "taxonomy_true_positive": 865,
+  "taxonomy_duplicate": 32,
+  "taxonomy_class_confusion": 28,
+  "taxonomy_localization_error": 58,
+  "taxonomy_FN": 1286,
+  "freeze_record_background_fp": 27,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.40213854021385403,
+  "val_op_p90_fp_per_image": 0.02829854969932791,
+  "val_map75": 0.41060626186943816,
+  "val_q25_macro_recall_iou50": 0.327328124232149,
+  "val_mean_matched_iou": 0.8102141876336727,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 10
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 7
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 6
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 2
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 20,
+   "stick": 5,
+   "gun": 33
+  }
+ },
+ {
+  "arm": "C4-M",
+  "seed": "1337",
+  "run": "C4-M_seed1337_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4-M_seed1337_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4-M_seed1337_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "8beb50bb42fdb432070f3b99d1189b002c780a1b6c7d2837945af05f7dc5bf5e",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4-M_seed1337_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "133c1a3487b32735f79bbb525b2ce5821e07a9e60a1b1327baf9c76d4ecd7d8e",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.29008,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1000,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 29,
+  "taxonomy_background_or_spurious_per_image": 0.010258224266006368,
+  "taxonomy_partial_wrong_overlap": 0,
+  "alt_background_plus_partial_count": 29,
+  "alt_background_plus_partial_per_image": 0.010258224266006368,
+  "taxonomy_true_positive": 852,
+  "taxonomy_duplicate": 48,
+  "taxonomy_class_confusion": 21,
+  "taxonomy_localization_error": 50,
+  "taxonomy_FN": 1299,
+  "freeze_record_background_fp": 29,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.39609483960948394,
+  "val_op_p90_fp_per_image": 0.030420940926777502,
+  "val_map75": 0.39721402920765875,
+  "val_q25_macro_recall_iou50": 0.33538257408226446,
+  "val_mean_matched_iou": 0.8033971571256266,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 6
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 3
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 2
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 22,
+   "gun": 25,
+   "stick": 3
+  }
+ },
+ {
+  "arm": "C4-M",
+  "seed": "20260703",
+  "run": "C4-M_seed20260703_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4-M_seed20260703_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4-M_seed20260703_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "2432bec132da7b9fc033d12351eb5d55d0b56db809c5216b22eff659b6dd719b",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4-M_seed20260703_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "0a5395bc430072f1045b374c87d50efd4c6b2007fbec2a46e3e0c08524932e51",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.36754,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1025,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 31,
+  "taxonomy_background_or_spurious_per_image": 0.010965688008489564,
+  "taxonomy_partial_wrong_overlap": 3,
+  "alt_background_plus_partial_count": 34,
+  "alt_background_plus_partial_per_image": 0.012026883622214362,
+  "taxonomy_true_positive": 877,
+  "taxonomy_duplicate": 39,
+  "taxonomy_class_confusion": 21,
+  "taxonomy_localization_error": 54,
+  "taxonomy_FN": 1274,
+  "freeze_record_background_fp": 31,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.4077173407717341,
+  "val_op_p90_fp_per_image": 0.0314821365405023,
+  "val_map75": 0.389134272414697,
+  "val_q25_macro_recall_iou50": 0.3605435156518748,
+  "val_mean_matched_iou": 0.7946617553482389,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 6
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 22,
+   "gun": 30,
+   "stick": 2
+  }
+ },
+ {
+  "arm": "C4R-M",
+  "seed": "42",
+  "run": "C4R-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4R-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4R-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "1a08b3a27261db17b511cc8dfcb5fc1c02bf013904bad52a78fc7c7fedb5b1f6",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4R-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "734206db3190843f8d94c2bb7d39b5c18a1990072ddf51925d2ed72bb5fdff1a",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.33423,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 980,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 31,
+  "taxonomy_background_or_spurious_per_image": 0.010965688008489564,
+  "taxonomy_partial_wrong_overlap": 2,
+  "alt_background_plus_partial_count": 33,
+  "alt_background_plus_partial_per_image": 0.011673151750972763,
+  "taxonomy_true_positive": 832,
+  "taxonomy_duplicate": 40,
+  "taxonomy_class_confusion": 19,
+  "taxonomy_localization_error": 56,
+  "taxonomy_FN": 1319,
+  "freeze_record_background_fp": 31,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.38679683867968384,
+  "val_op_p90_fp_per_image": 0.027591085956844712,
+  "val_map75": 0.39641024730858127,
+  "val_q25_macro_recall_iou50": 0.30161187281930313,
+  "val_mean_matched_iou": 0.8104169653987522,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 3
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "stick": 4,
+   "knife": 14,
+   "gun": 38
+  }
+ },
+ {
+  "arm": "C4R-M",
+  "seed": "1337",
+  "run": "C4R-M_seed1337_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4R-M_seed1337_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4R-M_seed1337_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "f9087a4e4f00f3b3c2fe9280eca07a0493a50fa31a597690187ca3f0252ff202",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4R-M_seed1337_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "642ae4541c2999cb79b17f606fa4915de2f3ad13fdf879a172071967723c16a7",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.31784,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1041,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 38,
+  "taxonomy_background_or_spurious_per_image": 0.013441811107180757,
+  "taxonomy_partial_wrong_overlap": 1,
+  "alt_background_plus_partial_count": 39,
+  "alt_background_plus_partial_per_image": 0.013795542978422356,
+  "taxonomy_true_positive": 893,
+  "taxonomy_duplicate": 33,
+  "taxonomy_class_confusion": 26,
+  "taxonomy_localization_error": 50,
+  "taxonomy_FN": 1258,
+  "freeze_record_background_fp": 38,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.41515574151557416,
+  "val_op_p90_fp_per_image": 0.0311284046692607,
+  "val_map75": 0.38989682347422605,
+  "val_q25_macro_recall_iou50": 0.31133716644552556,
+  "val_mean_matched_iou": 0.8052416752598582,
+  "_confusion_edges": [
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 8
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 6
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 6
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 3
+   }
+  ],
+  "_localization_errors_by_class": {
+   "stick": 3,
+   "gun": 33,
+   "knife": 14
+  }
+ },
+ {
+  "arm": "C4MixFT-M",
+  "seed": "42",
+  "run": "C4MixFT-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4MixFT-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4MixFT-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "af9f6e965761b842f957ee99ace621ebc16a1690bb3c258321570e679e47f7ce",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4MixFT-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "c5170f93eea3806e67f397d7c623ac424649b074344612785c7fbd0fc5ff21d0",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.47158,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 989,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 43,
+  "taxonomy_background_or_spurious_per_image": 0.015210470463388751,
+  "taxonomy_partial_wrong_overlap": 2,
+  "alt_background_plus_partial_count": 45,
+  "alt_background_plus_partial_per_image": 0.01591793420587195,
+  "taxonomy_true_positive": 841,
+  "taxonomy_duplicate": 32,
+  "taxonomy_class_confusion": 20,
+  "taxonomy_localization_error": 51,
+  "taxonomy_FN": 1310,
+  "freeze_record_background_fp": 43,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.3909809390980939,
+  "val_op_p90_fp_per_image": 0.02865228157056951,
+  "val_map75": 0.3876486629513658,
+  "val_q25_macro_recall_iou50": 0.3230035873998722,
+  "val_mean_matched_iou": 0.8015601974870639,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 7
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 3
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 2
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 14,
+   "stick": 3,
+   "gun": 34
+  }
+ },
+ {
+  "arm": "C4MixFT-M",
+  "seed": "1337",
+  "run": "C4MixFT-M_seed1337_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4MixFT-M_seed1337_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4MixFT-M_seed1337_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "ef451454378f5e9fef7e176e9bb6ab4bc4a4b7765c3379577762a51fa55893ba",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4MixFT-M_seed1337_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "c1b53a1530a5fe941d46949862dd899045b7c6e5af93e2a7176e66a82242422a",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.4255,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1059,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 39,
+  "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+  "taxonomy_partial_wrong_overlap": 4,
+  "alt_background_plus_partial_count": 43,
+  "alt_background_plus_partial_per_image": 0.015210470463388751,
+  "taxonomy_true_positive": 911,
+  "taxonomy_duplicate": 27,
+  "taxonomy_class_confusion": 23,
+  "taxonomy_localization_error": 55,
+  "taxonomy_FN": 1240,
+  "freeze_record_background_fp": 39,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.4235239423523942,
+  "val_op_p90_fp_per_image": 0.030420940926777502,
+  "val_map75": 0.3820611921968012,
+  "val_q25_macro_recall_iou50": 0.356297606762003,
+  "val_mean_matched_iou": 0.7961913644394124,
+  "_confusion_edges": [
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 5
+   },
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 5
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "stick",
+    "pred": "gun",
+    "count": 1
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 21,
+   "gun": 31,
+   "stick": 3
+  }
+ },
+ {
+  "arm": "C4Mix-M",
+  "seed": "42",
+  "run": "C4Mix-M_seed42_phase4_discovery",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4Mix-M_seed42_phase4_discovery",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4Mix-M_seed42_phase4_discovery/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "301d79f9f1ebe142e12fb38856b7b709b56bc4b155d16590ebf212420e5ad1cc",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4Mix-M_seed42_phase4_discovery/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "a3df7bdf0d5e36e3d4becf5d1e7f61d832775578b74af2b224c91c1a35c86065",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.45936,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 974,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 40,
+  "taxonomy_background_or_spurious_per_image": 0.014149274849663955,
+  "taxonomy_partial_wrong_overlap": 3,
+  "alt_background_plus_partial_count": 43,
+  "alt_background_plus_partial_per_image": 0.015210470463388751,
+  "taxonomy_true_positive": 826,
+  "taxonomy_duplicate": 26,
+  "taxonomy_class_confusion": 20,
+  "taxonomy_localization_error": 59,
+  "taxonomy_FN": 1325,
+  "freeze_record_background_fp": 40,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.38400743840074386,
+  "val_op_p90_fp_per_image": 0.024053767244428724,
+  "val_map75": 0.37452616722709575,
+  "val_q25_macro_recall_iou50": 0.31720969089390144,
+  "val_mean_matched_iou": 0.804392844966576,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 8
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 1
+   }
+  ],
+  "_localization_errors_by_class": {
+   "gun": 38,
+   "knife": 18,
+   "stick": 3
+  }
+ },
+ {
+  "arm": "C4Mix-M",
+  "seed": "1337",
+  "run": "C4Mix-M_seed1337_phase4_replicate",
+  "selection_dir": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4Mix-M_seed1337_phase4_replicate",
+  "val_predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/phase4_selection/C4Mix-M_seed1337_phase4_replicate/candidates/last/predictions.json",
+  "val_predictions_is_candidates_last": true,
+  "val_predictions_sha256": "8f4514488ae7275f7bea04e51cbc41f380c0787cb15b53edc7c9f77b0e91f9f3",
+  "checkpoint": "<PROJECT_ROOT>/experiments/ccad_yolo26n/models/students/C4Mix-M_seed1337_phase4_replicate/weights/last.pt",
+  "checkpoint_sha256_in_freeze": "62d58899dbe86224eba493e71d9caa067e413edbe7a412877bfef4efe78f93dc",
+  "checkpoint_sha_matches_lock_plan": true,
+  "matched_fp_threshold_from_val": 0.40127,
+  "reference_fp_per_image_C0Std": 0.05235231694375663,
+  "n_predictions_at_threshold": 1038,
+  "val_image_count": 2827,
+  "taxonomy_background_or_spurious_count": 29,
+  "taxonomy_background_or_spurious_per_image": 0.010258224266006368,
+  "taxonomy_partial_wrong_overlap": 6,
+  "alt_background_plus_partial_count": 35,
+  "alt_background_plus_partial_per_image": 0.012380615493455961,
+  "taxonomy_true_positive": 890,
+  "taxonomy_duplicate": 32,
+  "taxonomy_class_confusion": 22,
+  "taxonomy_localization_error": 59,
+  "taxonomy_FN": 1261,
+  "freeze_record_background_fp": 29,
+  "reproduces_frozen_freeze_record": true,
+  "val_matched_fp_recall": 0.41376104137610414,
+  "val_op_p90_fp_per_image": 0.0307746727980191,
+  "val_map75": 0.40506809843496133,
+  "val_q25_macro_recall_iou50": 0.3374858715415991,
+  "val_mean_matched_iou": 0.8032097732357107,
+  "_confusion_edges": [
+   {
+    "gt": "knife",
+    "pred": "stick",
+    "count": 9
+   },
+   {
+    "gt": "gun",
+    "pred": "stick",
+    "count": 5
+   },
+   {
+    "gt": "stick",
+    "pred": "knife",
+    "count": 4
+   },
+   {
+    "gt": "gun",
+    "pred": "knife",
+    "count": 3
+   },
+   {
+    "gt": "knife",
+    "pred": "gun",
+    "count": 1
+   }
+  ],
+  "_localization_errors_by_class": {
+   "knife": 16,
+   "gun": 38,
+   "stick": 5
+  }
+ }
+]

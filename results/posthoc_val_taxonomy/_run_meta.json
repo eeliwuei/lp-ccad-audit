@@ -1,0 +1,84 @@
+{
+ "val_image_count": 2827,
+ "val_images_listed": 2827,
+ "val_annotations": 2151,
+ "categories": [
+  1,
+  2,
+  3
+ ],
+ "final_classes": {
+  "0": "knife",
+  "1": "gun",
+  "2": "stick"
+ },
+ "taxonomy_script_sha256": "7731117297c4fed793e7e89898cf8fbf221976a98683e0a561591801013a0e2c",
+ "freeze_script_sha256": "2e766ab6ed0b43d4bd2755141a4e38fdd30072aea6e8c6e2ff2ae228c6cb1987",
+ "phase2b_common_sha256": "b35c8b86ac2b2207889f80a3a0f9799a12233dc97cb4015dcf2abf747d82e9ea",
+ "config_sha256": "0bbef382762a13cc7f21d08c1eeefbcc9b5c6780bec89d7241e34668795e8548",
+ "lock_plan_sha256": "bc8cc9deff10a75e7cb89c512d7d9006b4d2525c5dedeb1543471b5d87574622",
+ "sanity": {
+  "C0_yolo26n_human_only_960": {
+   "status": "ok",
+   "stored_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/error_taxonomy/C0_yolo26n_human_only_960_val.json",
+   "predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/image_eval/C0_yolo26n_human_only_960_val/predictions.json",
+   "confidence_threshold": 0.25,
+   "stored_counts": {
+    "TP": 1448,
+    "class_confusion": 25,
+    "localization_error": 128,
+    "partial_wrong_overlap": 5,
+    "duplicate": 98,
+    "background_fp": 59,
+    "FN": 703
+   },
+   "recomputed_counts": {
+    "TP": 1448,
+    "class_confusion": 25,
+    "localization_error": 128,
+    "partial_wrong_overlap": 5,
+    "duplicate": 98,
+    "background_fp": 59,
+    "FN": 703
+   },
+   "counts_match": true,
+   "fn_match": true,
+   "confusion_edges_match": true,
+   "localization_by_class_match": true,
+   "stored_background_fp": 59,
+   "recomputed_background_fp": 59
+  },
+  "C0s_yolo26s_human_only_960": {
+   "status": "ok",
+   "stored_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/error_taxonomy/C0s_yolo26s_human_only_960_val.json",
+   "predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/image_eval/C0s_yolo26s_human_only_960_val/predictions.json",
+   "confidence_threshold": 0.25,
+   "stored_counts": {
+    "TP": 1495,
+    "localization_error": 112,
+    "class_confusion": 24,
+    "background_fp": 44,
+    "duplicate": 62,
+    "partial_wrong_overlap": 4,
+    "FN": 656
+   },
+   "recomputed_counts": {
+    "TP": 1495,
+    "localization_error": 112,
+    "class_confusion": 24,
+    "background_fp": 44,
+    "duplicate": 62,
+    "partial_wrong_overlap": 4,
+    "FN": 656
+   },
+   "counts_match": true,
+   "fn_match": true,
+   "confusion_edges_match": true,
+   "localization_by_class_match": true,
+   "stored_background_fp": 44,
+   "recomputed_background_fp": 44
+  }
+ },
+ "reproduces_frozen_freeze_records": true,
+ "missing": []
+}

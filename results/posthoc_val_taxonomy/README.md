@@ -14,7 +14,7 @@ predictions, the frozen validation labels, and each arm's own frozen validation 
 threshold. Nothing frozen was modified; nothing under `../phase4_test_lock/` was read for arming
 or written.
 
-**Why it was needed.** `../../configs/phase4_decision_rule_v1.yaml`
+**Why it was needed.** `../../configs/frozen_protocol/phase4_decision_rule_v1.yaml`
 (`four_part_hypothesis_metric_mapping`) maps the four promised outcomes onto six quantities,
 because `localization` and `false_positives` each have two members:
 
