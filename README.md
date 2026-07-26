@@ -90,7 +90,7 @@ requirements file covers the tests, the figures and the synthetic example.
 ## Quick start
 
 ```bash
-python3 scripts/reproduce_tables.py     # Tables 10 & 11, locked test, bootstrap
+python3 scripts/reproduce_tables.py     # live calculations + frozen bootstrap CI verification
 pytest -q                               # the invariants behind those tables
 ```
 
@@ -101,7 +101,7 @@ Expected output, line for line, is in
 
 | command | produces |
 |---|---|
-| `python3 scripts/reproduce_tables.py` | Table 10 (effects, paired-$t$ CIs, TOST, Holm — all recomputed live), Table 11 (twelve raw runs, C0-R row, paired diffs, seed-blocked contrasts, checkpoint digests), the locked-test primaries and the bootstrap intervals |
+| `python3 scripts/reproduce_tables.py` | Table 10 (effects, paired-$t$ CIs, TOST, Holm — recomputed live), Table 11 (twelve raw runs, C0-R row, paired diffs, seed-blocked contrasts, checkpoint digests), locked-test primaries and contrasts, frozen bootstrap CIs, and ASLs recomputed from the released replicate table |
 | `python3 scripts/reproduce_figures.py` | Fig. 5B and the two locked-test panels from the CSVs; prints the values instead if matplotlib is absent, and lists the paper figures that are *not* regenerable here |
 | `python3 scripts/verify_schedule_exposure.py` | the human-readable nominal-exposure ledger (global view multiset, per-class active epochs, head/tail cardinality mix) for all nine randomized schedules |
 | `python3 examples/synthetic_minimal_example.py` | the projection loss on synthetic data, including the single-view gradient property |
@@ -166,6 +166,10 @@ and the 5-decimal script output.
 
 `CITATION.cff` carries the same metadata in machine-readable form. Update both
 when the DOI is issued.
+
+Published tags must never be force-moved. Corrections receive a new versioned
+tag and an external object-level manifest; see
+[docs/RELEASE_POLICY.md](docs/RELEASE_POLICY.md).
 
 ## License
 
