@@ -1,0 +1,633 @@
+{
+ "generated_utc": "2026-07-26T10:35:38.367758+00:00",
+ "what_this_is": "Post-hoc VALIDATION-side error-taxonomy false-positive metric for the 18 Phase-4 mainline arms, computed 2026-07-26 from the frozen validation predictions. The original validation pass wrote this quantity only inside each arm's selected_checkpoint.json freeze record and produced no standalone per-arm artefact; eval/error_taxonomy/ holds only the two C0 baselines. No inference was run. Deltas are treatment minus reference on the PRIMARY (protocol-complete last.pt) estimand.",
+ "definition": "tools/ccad/analyze_error_taxonomy.py::classify(val_gt_by_image, normalize_prediction_rows(<arm val predictions>, {1,2,3}, 'auto', matched_fp_threshold), {0:'knife',1:'gun',2:'stick'}, 0.0) -> counts['background_fp']; per-image divides by 2827 validation images. Identical to the test-side computation in eval/phase4_test_lock_posthoc_mapped/, so the two splits are comparable.",
+ "threshold_provenance": "each arm's own frozen validation matched-FP threshold, phase4_selection/<RUN>/selected_checkpoint.json -> candidates[label=='last'].matched_fp_threshold",
+ "background_or_spurious_resolution": "'background_or_spurious' is not a literal key in the project taxonomy. Resolved as counts['background_fp'] following tools/ccad/phase4d_synthesis.py line 106. The alternative literal reading (background_fp + partial_wrong_overlap) is reported alongside for every contrast.",
+ "metric_direction": {
+  "taxonomy_background_or_spurious_count": "lower is better",
+  "taxonomy_background_or_spurious_per_image": "lower is better",
+  "alt_background_plus_partial_count": "lower is better",
+  "alt_background_plus_partial_per_image": "lower is better"
+ },
+ "val_image_count": 2827,
+ "val_annotation_count": 2151,
+ "sanity_check_c0_baselines": {
+  "C0_yolo26n_human_only_960": {
+   "status": "ok",
+   "stored_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/error_taxonomy/C0_yolo26n_human_only_960_val.json",
+   "predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/image_eval/C0_yolo26n_human_only_960_val/predictions.json",
+   "confidence_threshold": 0.25,
+   "stored_counts": {
+    "TP": 1448,
+    "class_confusion": 25,
+    "localization_error": 128,
+    "partial_wrong_overlap": 5,
+    "duplicate": 98,
+    "background_fp": 59,
+    "FN": 703
+   },
+   "recomputed_counts": {
+    "TP": 1448,
+    "class_confusion": 25,
+    "localization_error": 128,
+    "partial_wrong_overlap": 5,
+    "duplicate": 98,
+    "background_fp": 59,
+    "FN": 703
+   },
+   "counts_match": true,
+   "fn_match": true,
+   "confusion_edges_match": true,
+   "localization_by_class_match": true,
+   "stored_background_fp": 59,
+   "recomputed_background_fp": 59
+  },
+  "C0s_yolo26s_human_only_960": {
+   "status": "ok",
+   "stored_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/error_taxonomy/C0s_yolo26s_human_only_960_val.json",
+   "predictions_file": "<PROJECT_ROOT>/experiments/ccad_yolo26n/eval/image_eval/C0s_yolo26s_human_only_960_val/predictions.json",
+   "confidence_threshold": 0.25,
+   "stored_counts": {
+    "TP": 1495,
+    "localization_error": 112,
+    "class_confusion": 24,
+    "background_fp": 44,
+    "duplicate": 62,
+    "partial_wrong_overlap": 4,
+    "FN": 656
+   },
+   "recomputed_counts": {
+    "TP": 1495,
+    "localization_error": 112,
+    "class_confusion": 24,
+    "background_fp": 44,
+    "duplicate": 62,
+    "partial_wrong_overlap": 4,
+    "FN": 656
+   },
+   "counts_match": true,
+   "fn_match": true,
+   "confusion_edges_match": true,
+   "localization_by_class_match": true,
+   "stored_background_fp": 44,
+   "recomputed_background_fp": 44
+  }
+ },
+ "reproduces_frozen_freeze_records": true,
+ "contrasts": {
+  "H1_core_annealing_vs_full_kd": {
+   "contrast": "C4-M minus C1-M",
+   "seeds": [
+    "42",
+    "1337",
+    "20260703"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": -12.0,
+     "taxonomy_background_or_spurious_per_image": -0.004244782454899187,
+     "alt_background_plus_partial_count": -12.0,
+     "alt_background_plus_partial_per_image": -0.004244782454899187
+    },
+    "1337": {
+     "taxonomy_background_or_spurious_count": -5.0,
+     "taxonomy_background_or_spurious_per_image": -0.0017686593562079942,
+     "alt_background_plus_partial_count": -7.0,
+     "alt_background_plus_partial_per_image": -0.002476123098691191
+    },
+    "20260703": {
+     "taxonomy_background_or_spurious_count": 9.0,
+     "taxonomy_background_or_spurious_per_image": 0.0031835868411743892,
+     "alt_background_plus_partial_count": 9.0,
+     "alt_background_plus_partial_per_image": 0.003183586841174391
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": -2.6666666666666665,
+    "taxonomy_background_or_spurious_per_image": -0.0009432849899775973,
+    "alt_background_plus_partial_count": -3.3333333333333335,
+    "alt_background_plus_partial_per_image": -0.0011791062374719955
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 27,
+      "taxonomy_background_or_spurious_per_image": 0.00955076052352317,
+      "alt_background_plus_partial_count": 30,
+      "alt_background_plus_partial_per_image": 0.010611956137247965
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 29,
+      "taxonomy_background_or_spurious_per_image": 0.010258224266006368,
+      "alt_background_plus_partial_count": 29,
+      "alt_background_plus_partial_per_image": 0.010258224266006368
+     },
+     "20260703": {
+      "taxonomy_background_or_spurious_count": 31,
+      "taxonomy_background_or_spurious_per_image": 0.010965688008489564,
+      "alt_background_plus_partial_count": 34,
+      "alt_background_plus_partial_per_image": 0.012026883622214362
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 39,
+      "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+      "alt_background_plus_partial_count": 42,
+      "alt_background_plus_partial_per_image": 0.014856738592147152
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 34,
+      "taxonomy_background_or_spurious_per_image": 0.012026883622214362,
+      "alt_background_plus_partial_count": 36,
+      "alt_background_plus_partial_per_image": 0.012734347364697559
+     },
+     "20260703": {
+      "taxonomy_background_or_spurious_count": 22,
+      "taxonomy_background_or_spurious_per_image": 0.007782101167315175,
+      "alt_background_plus_partial_count": 25,
+      "alt_background_plus_partial_per_image": 0.008843296781039971
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": -2.6666666666666665,
+    "mean_delta_per_image": -0.0009432849899775973
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": -3.3333333333333335,
+    "mean_delta_per_image": -0.0011791062374719955,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -12.0,
+      "alt_background_plus_partial_per_image": -0.004244782454899187
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -7.0,
+      "alt_background_plus_partial_per_image": -0.002476123098691191
+     },
+     "20260703": {
+      "alt_background_plus_partial_count": 9.0,
+      "alt_background_plus_partial_per_image": 0.003183586841174391
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  },
+  "H2_order_given_fixed_tail": {
+   "contrast": "C4-M minus C4MixFT-M",
+   "seeds": [
+    "42",
+    "1337"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": -16.0,
+     "taxonomy_background_or_spurious_per_image": -0.005659709939865582,
+     "alt_background_plus_partial_count": -15.0,
+     "alt_background_plus_partial_per_image": -0.005305978068623984
+    },
+    "1337": {
+     "taxonomy_background_or_spurious_count": -10.0,
+     "taxonomy_background_or_spurious_per_image": -0.0035373187124159884,
+     "alt_background_plus_partial_count": -14.0,
+     "alt_background_plus_partial_per_image": -0.004952246197382383
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": -13.0,
+    "taxonomy_background_or_spurious_per_image": -0.004598514326140785,
+    "alt_background_plus_partial_count": -14.5,
+    "alt_background_plus_partial_per_image": -0.005129112133003184
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 27,
+      "taxonomy_background_or_spurious_per_image": 0.00955076052352317,
+      "alt_background_plus_partial_count": 30,
+      "alt_background_plus_partial_per_image": 0.010611956137247965
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 29,
+      "taxonomy_background_or_spurious_per_image": 0.010258224266006368,
+      "alt_background_plus_partial_count": 29,
+      "alt_background_plus_partial_per_image": 0.010258224266006368
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 43,
+      "taxonomy_background_or_spurious_per_image": 0.015210470463388751,
+      "alt_background_plus_partial_count": 45,
+      "alt_background_plus_partial_per_image": 0.01591793420587195
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 39,
+      "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+      "alt_background_plus_partial_count": 43,
+      "alt_background_plus_partial_per_image": 0.015210470463388751
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": -13.0,
+    "mean_delta_per_image": -0.004598514326140785
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": -14.5,
+    "mean_delta_per_image": -0.005129112133003184,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -15.0,
+      "alt_background_plus_partial_per_image": -0.005305978068623984
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -14.0,
+      "alt_background_plus_partial_per_image": -0.004952246197382383
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  },
+  "H3_terminal_tail_content": {
+   "contrast": "C4MixFT-M minus C4Mix-M",
+   "seeds": [
+    "42",
+    "1337"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": 3.0,
+     "taxonomy_background_or_spurious_per_image": 0.0010611956137247958,
+     "alt_background_plus_partial_count": 2.0,
+     "alt_background_plus_partial_per_image": 0.0007074637424831984
+    },
+    "1337": {
+     "taxonomy_background_or_spurious_count": 10.0,
+     "taxonomy_background_or_spurious_per_image": 0.0035373187124159884,
+     "alt_background_plus_partial_count": 8.0,
+     "alt_background_plus_partial_per_image": 0.00282985496993279
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": 6.5,
+    "taxonomy_background_or_spurious_per_image": 0.002299257163070392,
+    "alt_background_plus_partial_count": 5.0,
+    "alt_background_plus_partial_per_image": 0.0017686593562079942
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 43,
+      "taxonomy_background_or_spurious_per_image": 0.015210470463388751,
+      "alt_background_plus_partial_count": 45,
+      "alt_background_plus_partial_per_image": 0.01591793420587195
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 39,
+      "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+      "alt_background_plus_partial_count": 43,
+      "alt_background_plus_partial_per_image": 0.015210470463388751
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 40,
+      "taxonomy_background_or_spurious_per_image": 0.014149274849663955,
+      "alt_background_plus_partial_count": 43,
+      "alt_background_plus_partial_per_image": 0.015210470463388751
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 29,
+      "taxonomy_background_or_spurious_per_image": 0.010258224266006368,
+      "alt_background_plus_partial_count": 35,
+      "alt_background_plus_partial_per_image": 0.012380615493455961
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": 6.5,
+    "mean_delta_per_image": 0.002299257163070392
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": 5.0,
+    "mean_delta_per_image": 0.0017686593562079942,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": 2.0,
+      "alt_background_plus_partial_per_image": 0.0007074637424831984
+     },
+     "1337": {
+      "alt_background_plus_partial_count": 8.0,
+      "alt_background_plus_partial_per_image": 0.00282985496993279
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  },
+  "H4_direction_joint": {
+   "contrast": "C4-M minus C4R-M",
+   "seeds": [
+    "42",
+    "1337"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": -4.0,
+     "taxonomy_background_or_spurious_per_image": -0.001414927484966395,
+     "alt_background_plus_partial_count": -3.0,
+     "alt_background_plus_partial_per_image": -0.0010611956137247976
+    },
+    "1337": {
+     "taxonomy_background_or_spurious_count": -9.0,
+     "taxonomy_background_or_spurious_per_image": -0.0031835868411743892,
+     "alt_background_plus_partial_count": -10.0,
+     "alt_background_plus_partial_per_image": -0.0035373187124159884
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": -6.5,
+    "taxonomy_background_or_spurious_per_image": -0.002299257163070392,
+    "alt_background_plus_partial_count": -6.5,
+    "alt_background_plus_partial_per_image": -0.002299257163070393
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 27,
+      "taxonomy_background_or_spurious_per_image": 0.00955076052352317,
+      "alt_background_plus_partial_count": 30,
+      "alt_background_plus_partial_per_image": 0.010611956137247965
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 29,
+      "taxonomy_background_or_spurious_per_image": 0.010258224266006368,
+      "alt_background_plus_partial_count": 29,
+      "alt_background_plus_partial_per_image": 0.010258224266006368
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 31,
+      "taxonomy_background_or_spurious_per_image": 0.010965688008489564,
+      "alt_background_plus_partial_count": 33,
+      "alt_background_plus_partial_per_image": 0.011673151750972763
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 38,
+      "taxonomy_background_or_spurious_per_image": 0.013441811107180757,
+      "alt_background_plus_partial_count": 39,
+      "alt_background_plus_partial_per_image": 0.013795542978422356
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": -6.5,
+    "mean_delta_per_image": -0.002299257163070392
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": -6.5,
+    "mean_delta_per_image": -0.002299257163070393,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -3.0,
+      "alt_background_plus_partial_per_image": -0.0010611956137247976
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -10.0,
+      "alt_background_plus_partial_per_image": -0.0035373187124159884
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  },
+  "H5_kd_usefulness": {
+   "contrast": "C1-M minus C0-R",
+   "seeds": [
+    "42",
+    "1337",
+    "20260703"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": 3.0,
+     "taxonomy_background_or_spurious_per_image": 0.0010611956137247976,
+     "alt_background_plus_partial_count": 2.0,
+     "alt_background_plus_partial_per_image": 0.0007074637424831966
+    },
+    "1337": {
+     "taxonomy_background_or_spurious_count": -12.0,
+     "taxonomy_background_or_spurious_per_image": -0.004244782454899187,
+     "alt_background_plus_partial_count": -11.0,
+     "alt_background_plus_partial_per_image": -0.0038910505836575893
+    },
+    "20260703": {
+     "taxonomy_background_or_spurious_count": -18.0,
+     "taxonomy_background_or_spurious_per_image": -0.00636717368234878,
+     "alt_background_plus_partial_count": -18.0,
+     "alt_background_plus_partial_per_image": -0.00636717368234878
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": -9.0,
+    "taxonomy_background_or_spurious_per_image": -0.0031835868411743897,
+    "alt_background_plus_partial_count": -9.0,
+    "alt_background_plus_partial_per_image": -0.003183586841174391
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 39,
+      "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+      "alt_background_plus_partial_count": 42,
+      "alt_background_plus_partial_per_image": 0.014856738592147152
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 34,
+      "taxonomy_background_or_spurious_per_image": 0.012026883622214362,
+      "alt_background_plus_partial_count": 36,
+      "alt_background_plus_partial_per_image": 0.012734347364697559
+     },
+     "20260703": {
+      "taxonomy_background_or_spurious_count": 22,
+      "taxonomy_background_or_spurious_per_image": 0.007782101167315175,
+      "alt_background_plus_partial_count": 25,
+      "alt_background_plus_partial_per_image": 0.008843296781039971
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 36,
+      "taxonomy_background_or_spurious_per_image": 0.012734347364697559,
+      "alt_background_plus_partial_count": 40,
+      "alt_background_plus_partial_per_image": 0.014149274849663955
+     },
+     "1337": {
+      "taxonomy_background_or_spurious_count": 46,
+      "taxonomy_background_or_spurious_per_image": 0.01627166607711355,
+      "alt_background_plus_partial_count": 47,
+      "alt_background_plus_partial_per_image": 0.016625397948355148
+     },
+     "20260703": {
+      "taxonomy_background_or_spurious_count": 40,
+      "taxonomy_background_or_spurious_per_image": 0.014149274849663955,
+      "alt_background_plus_partial_count": 43,
+      "alt_background_plus_partial_per_image": 0.015210470463388751
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": -9.0,
+    "mean_delta_per_image": -0.0031835868411743897
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": -9.0,
+    "mean_delta_per_image": -0.003183586841174391,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": 2.0,
+      "alt_background_plus_partial_per_image": 0.0007074637424831966
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -11.0,
+      "alt_background_plus_partial_per_image": -0.0038910505836575893
+     },
+     "20260703": {
+      "alt_background_plus_partial_count": -18.0,
+      "alt_background_plus_partial_per_image": -0.00636717368234878
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  },
+  "H6a_projection_single_view": {
+   "contrast": "C2-M minus C1-M",
+   "seeds": [
+    "42"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": -2.0,
+     "taxonomy_background_or_spurious_per_image": -0.0007074637424831984,
+     "alt_background_plus_partial_count": -4.0,
+     "alt_background_plus_partial_per_image": -0.001414927484966395
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": -2.0,
+    "taxonomy_background_or_spurious_per_image": -0.0007074637424831984,
+    "alt_background_plus_partial_count": -4.0,
+    "alt_background_plus_partial_per_image": -0.001414927484966395
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 37,
+      "taxonomy_background_or_spurious_per_image": 0.013088079235939158,
+      "alt_background_plus_partial_count": 38,
+      "alt_background_plus_partial_per_image": 0.013441811107180757
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 39,
+      "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+      "alt_background_plus_partial_count": 42,
+      "alt_background_plus_partial_per_image": 0.014856738592147152
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": -2.0,
+    "mean_delta_per_image": -0.0007074637424831984
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": -4.0,
+    "mean_delta_per_image": -0.001414927484966395,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -4.0,
+      "alt_background_plus_partial_per_image": -0.001414927484966395
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  },
+  "H6b_projection_group_view": {
+   "contrast": "C3-M minus C1-M",
+   "seeds": [
+    "42"
+   ],
+   "per_seed": {
+    "42": {
+     "taxonomy_background_or_spurious_count": -7.0,
+     "taxonomy_background_or_spurious_per_image": -0.0024761230986911926,
+     "alt_background_plus_partial_count": -10.0,
+     "alt_background_plus_partial_per_image": -0.0035373187124159884
+    }
+   },
+   "mean_delta": {
+    "taxonomy_background_or_spurious_count": -7.0,
+    "taxonomy_background_or_spurious_per_image": -0.0024761230986911926,
+    "alt_background_plus_partial_count": -10.0,
+    "alt_background_plus_partial_per_image": -0.0035373187124159884
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.011319419879731164,
+      "alt_background_plus_partial_count": 32,
+      "alt_background_plus_partial_per_image": 0.011319419879731164
+     }
+    },
+    "reference": {
+     "42": {
+      "taxonomy_background_or_spurious_count": 39,
+      "taxonomy_background_or_spurious_per_image": 0.013795542978422356,
+      "alt_background_plus_partial_count": 42,
+      "alt_background_plus_partial_per_image": 0.014856738592147152
+     }
+    }
+   },
+   "missing": [],
+   "reported_reading": {
+    "metric": "taxonomy_background_or_spurious (= background_fp)",
+    "mean_delta_count": -7.0,
+    "mean_delta_per_image": -0.0024761230986911926
+   },
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'.",
+    "mean_delta_count": -10.0,
+    "mean_delta_per_image": -0.0035373187124159884,
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -10.0,
+      "alt_background_plus_partial_per_image": -0.0035373187124159884
+     }
+    }
+   },
+   "sign_agreement_between_readings": true
+  }
+ }
+}
