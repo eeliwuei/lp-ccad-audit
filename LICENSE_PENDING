@@ -1,0 +1,24 @@
+LICENCE: PENDING AUTHOR DECISION
+
+The authors will select one of MIT, BSD-3-Clause or Apache-2.0 for this
+repository before the release is made public, and this file will be replaced by
+the chosen LICENSE text. Compatibility analysis behind that choice: all code
+here is original work by the authors and vendors no third-party source; it
+interfaces with Ultralytics (AGPL-3.0) only at arm's length -- a single
+function-local `from ultralytics import YOLO` inside scripts/freeze_eval.py,
+plus two conventions in lpccad/evaluation_adapter.py that match Ultralytics
+behaviour (integer LetterBox padding, batch dictionary keys), which is
+interface matching, not derivation -- and Ultralytics is not a dependency of
+this repository (it is deliberately absent from requirements.txt, and users who
+attempt the training tier install it themselves and carry their own AGPL
+obligations, including the network-use clause). The other external components,
+D-FINE and faster-coco-eval, are Apache-2.0 and are likewise used, not
+redistributed. Consequently no upstream licence forces a copyleft outcome here:
+MIT and BSD-3-Clause are maximally permissive and identical in effect for this
+content, while Apache-2.0 additionally grants an explicit patent licence and
+requires a NOTICE-style attribution -- the usual reason to prefer it for
+research code with any patent surface. Any of the three is legally viable; the
+decision, including whether to align with an institutional policy or a
+co-author's requirement, is reserved to the authors and is not made by this
+release candidate. Until it is made, no licence is granted: treat this
+repository as all-rights-reserved and do not redistribute it.

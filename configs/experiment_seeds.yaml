@@ -1,0 +1,33 @@
+# Seeds and frozen analysis constants for the LP-CCAD audit.
+# These values were fixed before the runs they govern and are reproduced here
+# so that every number in results/ can be traced to a declared constant.
+
+training_seeds: [42, 1337, 20260703]
+# Seed 42 is the discovery seed; 1337 and 20260703 are replicates. All four
+# factorial cells are run at all three seeds (seed-balanced design), which is
+# what makes the seed-blocked analysis in scripts/factorial_analysis.py valid.
+
+schedule_seeds:
+  # scripts/../lpccad/schedule.py: seed = base_seed + 1000*cell_index + k
+  base_seed: 20260721
+  K_schedule_replicates: 3
+  pairing: "s1<->42, s2<->1337, s3<->20260703 (one schedule draw per (cell, seed))"
+
+bootstrap:
+  seed: 20260725
+  B: 1000
+  clusters: 2099
+  unit: "source id (strip trailing _<index>, _f<frame>, Roboflow .rf.<hex>)"
+  interval: "percentile 95%"
+
+analysis:
+  sesoi: 0.01              # smallest effect size of interest, mAP50-95 points
+  primary_interval: "paired t over the 3 within-seed contrasts (df = 2)"
+  t_critical_df2: {ci95: 4.3027, ci90: 2.9200}
+  multiplicity: "Holm across the three TOST p-values (step-down, monotone-enforced)"
+  primary_estimand: "last.pt, validation split, unified COCOeval mAP50-95"
+
+schedule_file:
+  path: configs/factorial_schedules/phase4_view_schedules_v3_factorial.yaml
+  sha256_prefix: bfdd9285
+  sha256_full_file: configs/factorial_schedules/phase4_view_schedules_v3_factorial.yaml.sha256

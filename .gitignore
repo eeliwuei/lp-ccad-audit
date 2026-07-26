@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Nothing restricted may ever enter this repository. The entries below are a
+# safety net, not a policy: see docs/RESTRICTED_DATA_ACCESS.md.
+# ---------------------------------------------------------------------------
+
+# model weights and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.safetensors
+weights/
+checkpoints/
+runs/
+
+# datasets, imagery, video, annotation dumps
+data/
+datasets/
+images/
+labels/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.mp4
+*.avi
+*.mkv
+*.tar
+*.tar.gz
+*.zip
+predictions*.json
+*_gt_coco.json
+evidence*.jsonl
+
+# raw logs and intermediate experiment output
+logs/
+*.log
+boot_raw.jsonl
+figures/
+
+# credentials
+*.pem
+*.key
+.env
+.netrc
+credentials*
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# editors and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp

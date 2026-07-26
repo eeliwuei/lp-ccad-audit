@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software or its released results, please cite the paper below."
+title: "LP-CCAD Audit: reproducibility release"
+abstract: >-
+  Frozen results, configurations and analysis code for an audit of label-space
+  curriculum distillation (LP-CCAD). A validation ordering signal that
+  replicated across three seeds failed a prospectively locked test and a
+  randomized dose-matched follow-up; the audit framework is the contribution.
+  No dataset, imagery or checkpoint is included.
+type: software
+authors:
+  - family-names: "Liu"
+    given-names: "Wei"
+    affiliation: "DeepFarm Inc., Seoul, Republic of Korea"
+  - family-names: "Jang"
+    given-names: "Seojin"
+    affiliation: "DeepFarm Inc., Seoul, Republic of Korea"
+    email: "seojinygud@deepfarm.net"
+license-url: "LICENSE_PENDING"
+keywords:
+  - knowledge distillation
+  - object detection
+  - curriculum learning
+  - reproducibility
+  - equivalence testing
+  - research auditing
+preferred-citation:
+  type: article
+  status: preprint
+  title: >-
+    Auditing Label-Space Curriculum Distillation: A Validation Ordering Signal
+    Fails a Locked Test and a Randomized Follow-Up
+  authors:
+    - family-names: "Liu"
+      given-names: "Wei"
+    - given-names: "Seojin"
+      family-names: "Jang"
+  journal: "Machine Learning with Applications"
+  year: 2026
+  notes: "Preprint / under review; volume, pages and DOI to be added on acceptance."

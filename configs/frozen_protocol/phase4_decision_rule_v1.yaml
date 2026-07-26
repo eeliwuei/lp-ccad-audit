@@ -1,0 +1,134 @@
+# Phase 4 pre-registered decision rule (v1).
+# Registered 2026-07-03 (UTC), while C2-M was training (~epoch 120/150) and
+# BEFORE any of C3-M / C4-M / C4R-M / C4Mix-M / C4MixFT-M had started.
+# The frozen results existing at registration time were exactly:
+#   C0-R, CBox-M, C1-M (secondary val-selected mAP50-95: 0.41567 / 0.40381 / 0.40858).
+# Nothing in this file may be edited after any of the remaining arms starts
+# training. Changes require a new versioned file plus explicit user approval.
+decision_rule_version: phase4_decision_rule_v1
+registered_utc_date: "2026-07-03"
+registered_while: "C2-M training epoch ~120; C3/C4/C4R/C4Mix/C4MixFT not started"
+test_policy: unchanged_locked_single_execution_after_user_approval
+
+estimand_governance:
+  confirmatory_estimand: primary_protocol_complete_last_pt_final_ema
+  confirmatory_metric: unified_COCOeval_val_mAP50_95
+  secondary_val_selected_role: >
+    Reported for completeness but never confirmatory: per-model validation
+    maxima are upward-biased order statistics, land at non-identical epochs
+    across models, and the near-best tie-break selects on matched-FP recall,
+    so secondary-estimand matched-FP recall carries a selection-induced
+    upward bias. Cross-model ordering statements must be recomputed on the
+    primary estimand before being asserted.
+
+confirmatory_contrasts:
+  H1_core_annealing_vs_full_kd:
+    contrast: C4-M minus C1-M
+    replicated: true
+    interpretation: class-count annealed KD vs plain full-view KD
+  H2_order_given_fixed_tail:
+    contrast: C4-M minus C4MixFT-M
+    replicated: false
+    interpretation: >
+      Monotone annealing order vs shuffled order with the SAME low-LR terminal
+      tail (epochs 110-149 identical single-view cycle). This is the clean
+      order test; it is not confounded by terminal-view content.
+  H3_terminal_tail_content:
+    contrast: C4MixFT-M minus C4Mix-M
+    replicated: false
+    interpretation: >
+      Effect of consolidating on a pure single-view tail during the low-LR
+      phase vs a mixed tail, with shuffled (non-annealed) order in both arms.
+  H4_direction_joint:
+    contrast: C4-M minus C4R-M
+    replicated: false
+    interpretation: >
+      JOINT effect of curriculum direction AND terminal-view content. Under
+      the shared monotone-decay LR schedule, exact reversal also swaps which
+      view occupies the low-LR consolidation tail, so this contrast is
+      declared as direction+terminal jointly and may NOT be reported as
+      "direction matters" on its own. Decompose using H2 and H3.
+  H5_kd_usefulness:
+    contrast: C1-M minus C0-R
+    replicated: true
+    interpretation: does plain full-view KD beat the controlled human-only baseline at all
+  H6_projection_value:
+    contrasts: [C2-M minus C1-M, C3-M minus C1-M]
+    replicated: false
+    interpretation: single-view / group-view projection vs full-view KD
+    caveat: >
+      Arms do not hold per-class class-KD exposure frequency constant
+      (active-class epoch counts per ledger: C1=150/150/150,
+      C2=50/50/50, C3=150/75/75, C4=124/83/83). The varying exposure IS the
+      treatment (label-space projection), but any C2/C3 deficit could also
+      reflect reduced class-KD dosage; interpret jointly with H1/H2.
+
+noise_floor_and_replication:
+  replicate_set:
+    models: [C0-R, C1-M, C4-M]
+    seeds: [42, 1337, 20260703]
+  paired_design: >
+    For H1, compute per-seed paired delta: mAP(C4-M, seed s) - mAP(C1-M, seed s)
+    for s in {42, 1337, 20260703}, on the confirmatory estimand.
+  sigma_hat: >
+    Pooled sample standard deviation of confirmatory-metric values across the
+    3 seeds, pooled over the 3 replicated models (df = 2 per model, 6 total).
+  epsilon: max(0.005, 2 * sigma_hat)
+  H1_supported_if: all 3 paired deltas positive AND mean paired delta >= epsilon
+  H1_refuted_if: all 3 paired deltas negative AND mean paired delta <= -epsilon
+  H1_otherwise: inconclusive_within_noise_floor
+  H5_rule: same paired rule as H1 applied to C1-M minus C0-R
+  single_seed_contrasts_rule: >
+    H2/H3/H4/H6 are single-seed (42): report the point delta against epsilon.
+    |delta| < epsilon must be reported as "within noise floor"; no direction
+    claim is permitted. |delta| >= epsilon is "suggestive" (not confirmed),
+    because single-seed deltas cannot exclude seed-by-arm interaction.
+
+four_part_hypothesis_metric_mapping:
+  recall: matched_fp_recall (at matched-FP threshold vs C0-Std reference fp/image)
+  small_objects_q25: q25_macro_recall_iou50
+  localization: [unified_val_map75, mean_matched_iou]
+  false_positives: [error_taxonomy_matched_fp.background_or_spurious, op_p90.fp_per_image]
+  rule: >
+    The headline verdict comes from the confirmatory metric only. Each of the
+    four promised outcomes is judged by its mapped metric(s) on the primary
+    estimand. Secondaries qualify the headline but never overturn it; if they
+    conflict with the primary, the result is reported as "mixed" with all
+    values shown. All four mapped outcomes are reported for every contrast
+    regardless of direction; selective emphasis is prohibited.
+
+multiplicity_and_test:
+  confirmatory_contrast_count: 7
+  exploratory_everything_else: true
+  test_execution: >
+    One locked test run after ALL arms (original five + C4MixFT-M + six
+    replicates) are frozen and the user explicitly approves. The test run
+    evaluates exactly the confirmatory contrasts and mapped metrics listed
+    here; no additional test looks.
+
+scope_and_reporting_discipline:
+  scope_statement: >
+    All conclusions are conditional on: weapon_detection_ccad_v2, D-FINE-X
+    best_stg1 teacher, yolo26n student, imgsz 960, geometric augmentation off,
+    matched-only E1 evidence. The name LP-CCAD asserts no generality beyond
+    this configuration; external validity requires separate replication.
+  c0_std_out_of_scope: >
+    Comparisons are against the protocol-controlled C0-R only. Nothing here
+    establishes superiority over a normally-trained (augmented) yolo26n; that
+    comparison is explicitly out of scope for Phase 4.
+  symmetric_interpretation: >
+    The C1-M/CBox-M null results motivate but do not favor LP-CCAD. Repeated
+    KD nulls are also weak evidence that matched-only KD may not help this
+    student; C4-M outcomes must be read against both possibilities.
+  class_kd_information_content: >
+    Because E1_cls requires teacher top class == human GT (p >= 0.30), class
+    KD provides soft calibration on agreed samples rather than new class
+    information; box KD is the channel through which the teacher can add
+    localization information. Claims about "projected teacher label space"
+    must be phrased accordingly.
+  kd_scalar_logging_limitation: >
+    Per-epoch kd_box/kd_cls scalars are not separately persisted by the
+    frozen trainer (results.csv has aggregate losses + per-group LR only).
+    View-transition audits rely on sidecar current_view plus command/contract
+    SHAs. This is a known limitation, accepted to avoid modifying the frozen
+    trainer mid-sequence.

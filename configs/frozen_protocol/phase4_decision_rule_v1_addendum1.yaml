@@ -1,0 +1,46 @@
+# RELEASE NOTE: this frozen protocol file is reproduced verbatim except for two
+# sanitizations, both marked below: internal training-host names were replaced
+# with the generic token `a100_rtrack_host`, and the `base_rule` /
+# `preregistration` paths were rewritten to their location in this repository.
+# No rule text, threshold or run list was altered.
+#
+# Addendum 1 to phase4_decision_rule_v1.yaml (which remains unmodified).
+# Registered 2026-07-03 (UTC), same day as the base rule, still BEFORE any of
+# C3-M / C4-M / C4R-M / C4Mix-M / C4MixFT-M started training.
+# Authorized by the project owner ("加入更多的实验进行验证", 2026-07-03).
+addendum_version: phase4_decision_rule_v1_addendum1
+base_rule: configs/frozen_protocol/phase4_decision_rule_v1.yaml  # path sanitized
+base_rule_modified: false
+
+upgrade_decomposition_contrasts_to_two_seeds:
+  added_runs: [C4R-M seed1337, C4Mix-M seed1337, C4MixFT-M seed1337]
+  affected: [H2_order_given_fixed_tail, H3_terminal_tail_content, H4_direction_joint]
+  rule: >
+    Each affected contrast is now evaluated as paired per-seed deltas over
+    seeds {42, 1337} on the confirmatory estimand. "Supported (2-seed)"
+    requires both deltas to share sign AND |mean| >= epsilon (epsilon from the
+    base rule). Discordant signs or |mean| < epsilon -> inconclusive. The
+    2-seed standard remains weaker than H1's 3-seed standard and is labeled
+    as such in all reporting.
+
+rtrack_integration:
+  preregistration: phase4_rtrack_preregistration_v1.yaml  # exploratory R-track prereg; not part of this minimal release
+  rules:
+    - R-track (a100_rtrack_host, exploratory) results never overturn main-line
+      verdicts; they attach robustness qualifiers.
+    - "robust" qualifier: same-sign contrast on H100 main line and A100
+      R-track (R0), and for H1 additionally same sign under cosine LR (R1).
+    - "fragile" qualifier: sign flip on any R-track counterpart; reported as
+      a scope limitation, with the main-line verdict retained.
+    - R3 (C1Third vs C2) informs the H6 dosage caveat: if C2 beats C1Third at
+      matched integrated class-KD dose, projection geometry (not dosage)
+      explains the C2-C1 difference; reported as exploratory evidence only.
+
+queue_after_this_addendum:
+  h100_supervisor_v2: [C4MixFT-M s42, C0-R s1337, C1-M s1337, C4-M s1337,
+                       C0-R s20260703, C1-M s20260703, C4-M s20260703,
+                       C4R-M s1337, C4Mix-M s1337, C4MixFT-M s1337]
+  a100_rtrack_host_gpu1: [C4-M-a100, C1cos-M-a100, C4shift10-M-a100, C1Third-M-a100]
+  a100_rtrack_host_gpu3: [C1-M-a100, C4cos-M-a100, C2-M-a100, C0-R-a100]
+
+test_policy: unchanged_locked

@@ -1,0 +1,27 @@
+# Dependencies for the reproducibility release.
+#
+# NOTE: scripts/reproduce_tables.py needs NONE of these -- it is standard
+# library only, so the paper's tables can be checked with a bare Python 3.9+.
+# Everything below is for the tests, the figures and the synthetic example.
+
+torch>=2.0            # lpccad/projection_loss.py, examples/synthetic_minimal_example.py
+
+# numpy is pulled in transitively. The training and evaluation environment
+# pinned numpy<2 because the faster-coco-eval / pycocotools wheels in use were
+# built against the NumPy 1.x ABI; if you hit an ABI error on import, pin
+# `numpy<2` in your environment. It is left unpinned here so that the
+# stdlib-only path is not held back by a constraint it does not need.
+
+pyyaml>=6.0           # scripts/verify_schedule_exposure.py, lpccad/schedule.py
+                      # (tests/test_schedule_multiset.py falls back to a
+                      #  minimal parser when PyYAML is absent)
+faster-coco-eval      # the frozen evaluator; tests/test_bootstrap_duplicate_ids.py
+pytest>=7.0           # tests/
+matplotlib            # scripts/reproduce_figures.py (optional: it prints the
+                      # numbers as text when matplotlib is missing)
+
+# ultralytics is deliberately NOT listed. It is AGPL-3.0, nothing here imports
+# it except scripts/freeze_eval.py (which cannot run without the restricted
+# data anyway), and users attempting the training tier must install it
+# themselves and carry their own compliance obligations.
+# See docs/THIRD_PARTY_NOTICES.md.
