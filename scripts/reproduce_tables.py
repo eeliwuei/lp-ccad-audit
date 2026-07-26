@@ -256,6 +256,51 @@ def locked_test_arms() -> None:
     print()
 
 
+EPS_TEST = 0.0191  # frozen test noise floor = max(0.005, 2*sigma_test)
+
+# Table 7(b): the five registered contrasts, decomposed per seed. Each is a
+# difference of two panel-(a) primaries, so this panel is fully determined by
+# results/locked_test_contrasts.csv -- no additional records are needed.
+TEST_CONTRASTS = [
+    ("H1  C4-M - C1-M", "C4-M", "C1-M"),
+    ("H2  C4-M - C4MixFT-M", "C4-M", "C4MixFT-M"),
+    ("H3  C4MixFT-M - C4Mix-M", "C4MixFT-M", "C4Mix-M"),
+    ("H4  C4-M - C4R-M", "C4-M", "C4R-M"),
+    ("H5  C1-M - C0-R", "C1-M", "C0-R"),
+]
+
+
+def locked_test_contrasts() -> None:
+    """Table 7 panel (b): per-seed contrasts and their means, from panel (a)."""
+    rows = read_csv("locked_test_contrasts.csv")
+    by = {(r["arm"], str(r["seed"])): float(r["mAP50_95"]) for r in rows}
+    seeds = ["42", "1337", "20260703"]
+    print(rule("="))
+    print("LOCKED-TEST PER-SEED CONTRASTS  (Table 7 panel (b))")
+    print(f"        frozen test noise floor eps_test = {EPS_TEST}")
+    print(rule("="))
+    header = f"{'contrast':<26}" + "".join(f"{s:>13}" for s in seeds) + f"{'mean':>13}  verdict"
+    print(header)
+    print(rule())
+    for name, a, b in TEST_CONTRASTS:
+        cells, vals = [], []
+        for s in seeds:
+            if (a, s) in by and (b, s) in by:
+                d = by[(a, s)] - by[(b, s)]
+                vals.append(d)
+                cells.append(f"{d:>+13.5f}")
+            else:
+                cells.append(f"{'--':>13}")
+        mean = sum(vals) / len(vals)
+        verdict = "inconclusive" if abs(mean) < EPS_TEST else "RESOLVES"
+        print(f"{name:<26}" + "".join(cells) + f"{mean:>+13.5f}  {verdict}")
+    print(rule())
+    print("every mean falls below the frozen test noise floor: no registered")
+    print("contrast is confirmed on the locked test. H2, sign-stable across")
+    print("validation seeds, splits +/- here.")
+    print()
+
+
 def main() -> int:
     runs = load_runs()
     stats = {k: effect_stats([effects_within_seed(runs, s)[k] for s in SEEDS]) for k in EFFECTS}
@@ -268,6 +313,7 @@ def main() -> int:
     table10(stats, paper)
     table11(runs, stats)
     locked_test_arms()
+    locked_test_contrasts()
     table_bootstrap()
     print("done. See docs/EXPECTED_OUTPUTS.md for the values this should print.")
     return 0

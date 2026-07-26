@@ -12,7 +12,9 @@ No dataset, no checkpoint, no GPU, no network. Python 3.9+ standard library.
 |---|---|---|
 | Table 10 (factorial effects, paired-$t$ CIs, TOST, Holm) | `python3 scripts/reproduce_tables.py` | stdlib only |
 | Table 11 (twelve raw runs, C0-R row, paired diffs, seed-blocked contrasts) | same command | stdlib only |
-| Locked-test primaries and the source-clustered bootstrap intervals | same command | stdlib only |
+| Table 7(a) locked-test primaries (every mainline arm at every replicated seed) | same command | stdlib only |
+| Table 7(b) per-seed contrasts H1-H5, their means and the eps_test verdicts | same command | stdlib only |
+| Source-clustered bootstrap intervals | same command | stdlib only |
 | Schedule dose-match invariant (all nine randomized arms vs C4-M) | `python3 -m pytest tests/test_schedule_multiset.py -q` | pytest (PyYAML optional) |
 | The published contrasts recomputed from the raw runs | `python3 -m pytest tests/test_expected_statistics.py -q` | pytest |
 | Why the bootstrap must renumber cloned ids | `python3 -m pytest tests/test_bootstrap_duplicate_ids.py -q` | pytest + faster-coco-eval (skips otherwise) |

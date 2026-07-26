@@ -102,3 +102,33 @@ def test_kd_arms_do_not_beat_the_no_kd_baseline():
     assert sum(1 for d in diffs if d < 0) == 11, [round(d, 5) for d in diffs]
     positives = [(c, s) for c in CELLS for s in SEEDS if runs[(c, s)] - c0r[s] > 0]
     assert positives == [("mono_single", 42)], positives
+
+
+def test_locked_test_contrast_means_match_the_paper():
+    """Table 7(b): the five registered contrasts, recomputed from panel (a).
+
+    The manuscript reports the locked-test means as H1 -0.0085, H2 -0.0091,
+    H3 +0.0053, H4 -0.0051, H5 +0.0016, every one inside the frozen test noise
+    floor eps_test = 0.0191. Each is a difference of two released primaries, so
+    this is a full check of the paper's confirmatory table -- not a restatement
+    of it. If any mean ever crossed the floor, the paper's central claim (the
+    locked test resolves nothing) would have changed.
+    """
+    rows = list(csv.DictReader((REPO / "results/locked_test_contrasts.csv").open(newline="")))
+    by = {(r["arm"], r["seed"]): float(r["mAP50_95"]) for r in rows}
+    seeds = ("42", "1337", "20260703")
+    expected = {"H1": -0.0085, "H2": -0.0091, "H3": 0.0053, "H4": -0.0051, "H5": 0.0016}
+    pairs = {
+        "H1": ("C4-M", "C1-M"),
+        "H2": ("C4-M", "C4MixFT-M"),
+        "H3": ("C4MixFT-M", "C4Mix-M"),
+        "H4": ("C4-M", "C4R-M"),
+        "H5": ("C1-M", "C0-R"),
+    }
+    eps_test = 0.0191
+    for key, (a, b) in pairs.items():
+        vals = [by[(a, s)] - by[(b, s)] for s in seeds if (a, s) in by and (b, s) in by]
+        assert vals, key
+        mean = sum(vals) / len(vals)
+        assert abs(mean - expected[key]) < 5e-5, f"{key}: {mean:.5f} vs paper {expected[key]}"
+        assert abs(mean) < eps_test, f"{key}: |{mean:.5f}| now clears eps_test={eps_test}"

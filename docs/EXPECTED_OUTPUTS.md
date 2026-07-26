@@ -171,3 +171,26 @@ With matplotlib: writes `figures/fig_factorial_order_effect.pdf`,
 Without it: prints the same numbers as text. Either way it ends with the
 explicit list of paper figures that are **not** regenerable from this release
 (Figs. 1, 2, 3, 4, 5A-validation-half, 6) and why.
+
+### Table 7(b) — locked-test per-seed contrasts
+
+`reproduce_tables.py` recomputes each registered contrast from the panel-(a)
+primaries in `results/locked_test_contrasts.csv` and prints:
+
+```
+H1  C4-M - C1-M                -0.00513     -0.02991     +0.00945     -0.00853  inconclusive
+H2  C4-M - C4MixFT-M           +0.00559     -0.02382           --     -0.00911  inconclusive
+H3  C4MixFT-M - C4Mix-M        +0.01036     +0.00024           --     +0.00530  inconclusive
+H4  C4-M - C4R-M               -0.00717     -0.00298           --     -0.00508  inconclusive
+H5  C1-M - C0-R                +0.00550     +0.01084     -0.01153     +0.00161  inconclusive
+```
+
+The manuscript rounds these means to `-0.0085 / -0.0091 / +0.0053 / -0.0051 /
++0.0016`, and every one is inside the frozen test noise floor
+`eps_test = 0.0191` — which is the paper's central confirmatory result: the
+locked test resolves nothing. `tests/test_expected_statistics.py::
+test_locked_test_contrast_means_match_the_paper` pins both the values and the
+floor, so a future edit cannot change that conclusion silently.
+
+Dashes are arms the frozen plan did not replicate at that seed; the mean is
+taken over the seeds that exist, exactly as in the manuscript.
