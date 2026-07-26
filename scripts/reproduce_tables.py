@@ -261,12 +261,16 @@ EPS_TEST = 0.0191  # frozen test noise floor = max(0.005, 2*sigma_test)
 # Table 7(b): the five registered contrasts, decomposed per seed. Each is a
 # difference of two panel-(a) primaries, so this panel is fully determined by
 # results/locked_test_contrasts.csv -- no additional records are needed.
+# The frozen decision rule registers SEVEN confirmatory contrasts: H6 is
+# declared as two (C2-M - C1-M and C3-M - C1-M), both at seed 42 only.
 TEST_CONTRASTS = [
     ("H1  C4-M - C1-M", "C4-M", "C1-M"),
     ("H2  C4-M - C4MixFT-M", "C4-M", "C4MixFT-M"),
     ("H3  C4MixFT-M - C4Mix-M", "C4MixFT-M", "C4Mix-M"),
     ("H4  C4-M - C4R-M", "C4-M", "C4R-M"),
     ("H5  C1-M - C0-R", "C1-M", "C0-R"),
+    ("H6a C2-M - C1-M", "C2-M", "C1-M"),
+    ("H6b C3-M - C1-M", "C3-M", "C1-M"),
 ]
 
 
@@ -276,7 +280,7 @@ def locked_test_contrasts() -> None:
     by = {(r["arm"], str(r["seed"])): float(r["mAP50_95"]) for r in rows}
     seeds = ["42", "1337", "20260703"]
     print(rule("="))
-    print("LOCKED-TEST PER-SEED CONTRASTS  (Table 7 panel (b))")
+    print("LOCKED-TEST PER-SEED CONTRASTS  (Table 7(b) plus the two H6 contrasts)")
     print(f"        frozen test noise floor eps_test = {EPS_TEST}")
     print(rule("="))
     header = f"{'contrast':<26}" + "".join(f"{s:>13}" for s in seeds) + f"{'mean':>13}  verdict"

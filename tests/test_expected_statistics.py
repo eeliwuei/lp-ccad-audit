@@ -118,7 +118,8 @@ def test_locked_test_contrast_means_match_the_paper():
     rows = list(csv.DictReader((REPO / "results/locked_test_contrasts.csv").open(newline="")))
     by = {(r["arm"], r["seed"]): float(r["mAP50_95"]) for r in rows}
     seeds = ("42", "1337", "20260703")
-    expected = {"H1": -0.0085, "H2": -0.0091, "H3": 0.0053, "H4": -0.0051, "H5": 0.0016}
+    expected = {"H1": -0.0085, "H2": -0.0091, "H3": 0.0053, "H4": -0.0051,
+                "H5": 0.0016, "H6a": 0.0038, "H6b": -0.0080}
     pairs = {
         "H1": ("C4-M", "C1-M"),
         "H2": ("C4-M", "C4MixFT-M"),

@@ -101,7 +101,7 @@ C4-M              1337     0.38106    0.3712    0.3201    0.4519
 C4Mix-M           1337     0.40464    0.3763    0.3348    0.5029
 ```
 
-### Table 7(b) — locked-test per-seed contrasts
+### Table 7(b) + H6 — the seven registered locked-test contrasts
 
 `reproduce_tables.py` recomputes each registered contrast from the panel-(a)
 primaries in `results/locked_test_contrasts.csv` and prints:
@@ -112,7 +112,12 @@ H2  C4-M - C4MixFT-M           +0.00559     -0.02382           --     -0.00911  
 H3  C4MixFT-M - C4Mix-M        +0.01036     +0.00024           --     +0.00530  inconclusive
 H4  C4-M - C4R-M               -0.00717     -0.00298           --     -0.00508  inconclusive
 H5  C1-M - C0-R                +0.00550     +0.01084     -0.01153     +0.00161  inconclusive
+H6a C2-M - C1-M                +0.00378           --           --     +0.00378  inconclusive
+H6b C3-M - C1-M                -0.00798           --           --     -0.00798  inconclusive
 ```
+
+H6 is registered by the frozen rule as **two** contrasts (`confirmatory_contrast_count: 7`),
+both at seed 42 only. An earlier release covered only H1-H5.
 
 The manuscript rounds these means to `-0.0085 / -0.0091 / +0.0053 / -0.0051 /
 +0.0016`, and every one is inside the frozen test noise floor
