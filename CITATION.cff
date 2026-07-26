@@ -5,7 +5,8 @@ abstract: >-
   Frozen results, configurations and analysis code for an audit of label-space
   curriculum distillation (LP-CCAD). A validation ordering signal that
   replicated across three seeds failed a prospectively locked test and a
-  randomized dose-matched follow-up; the audit framework is the contribution.
+  randomized follow-up matched on nominal exposure; the audit framework is
+  the contribution.
   No dataset, imagery or checkpoint is included.
 type: software
 authors:
@@ -26,7 +27,7 @@ keywords:
   - research auditing
 preferred-citation:
   type: article
-  status: preprint
+  status: unpublished
   title: >-
     Auditing Label-Space Curriculum Distillation: A Validation Ordering Signal
     Fails a Locked Test and a Randomized Follow-Up
@@ -35,7 +36,9 @@ preferred-citation:
       given-names: "Wei"
     - given-names: "Seojin"
       family-names: "Jang"
-  journal: "Machine Learning with Applications"
   year: 2026
-  notes: "Preprint / under review; volume, pages and DOI to be added on acceptance."
+  notes: >-
+    Unpublished manuscript, not peer reviewed; prepared for submission to
+    Machine Learning with Applications. Venue, volume, pages and DOI to be
+    added if and when published.
 license: MIT

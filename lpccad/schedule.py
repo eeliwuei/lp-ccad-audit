@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
-"""LP-CCAD v3: a clean, dose-matched 2x2 factorial of (order x tail) with
-K schedule replicates per non-baseline cell (breaks the single-permutation
-"schedule lottery"). Reviewer §2.2/§2.3/§2.4/§4.4.
+"""LP-CCAD v3: a 2x2 factorial of (order x tail), matched on NOMINAL
+exposure, with K schedule replicates per non-baseline cell (breaks the
+single-permutation "schedule lottery").
+
+TERMINOLOGY WARNING. This file and the schedule YAML it emits use the phrase
+"dose-matched" in the sense of *nominal* exposure: every arm sees the identical
+global view multiset, so per-class active-epoch budgets are equal by
+construction. That string is preserved verbatim because it is part of the
+frozen artifact whose SHA-256 the paper cites (bfdd9285...); changing it would
+break byte-identical regeneration. It does NOT mean effective distillation dose
+is matched: the 0.999-IoU admission gate and the optimizer state at which each
+view is presented make the number of admitted evidence pairs path-dependent.
+The paper carries effective dose as a competing explanation it cannot exclude.
 
 Design (fully documented, deterministic given a schedule seed):
   - GLOBAL view multiset M is IDENTICAL for every arm = the C4-M multiset
