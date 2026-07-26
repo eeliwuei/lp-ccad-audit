@@ -1,0 +1,832 @@
+{
+ "generated_utc": "2026-07-26T09:11:02.082451+00:00",
+ "what_this_is": "Post-hoc re-scoring of the frozen, already-consumed Phase-4 locked-test predictions (consumption event 2026-07-20). No inference was run; the lock was not touched. Deltas are treatment_arm minus reference_arm on the PRIMARY (protocol-complete last.pt) estimand.",
+ "four_part_mapping": {
+  "recall": [
+   "matched_fp_recall"
+  ],
+  "small_objects": [
+   "q25_macro_recall_iou50"
+  ],
+  "localization": [
+   "map75",
+   "mean_matched_iou"
+  ],
+  "false_positives": [
+   "taxonomy_background_or_spurious_count",
+   "taxonomy_background_or_spurious_per_image",
+   "op_p90_fp_per_image"
+  ]
+ },
+ "background_or_spurious_resolution": "'background_or_spurious' is not a literal key in the project's taxonomy. Resolved as counts['background_fp'] following tools/ccad/phase4d_synthesis.py line 106, which selects taxonomy keys containing 'background'. The alternative literal reading (background_fp + partial_wrong_overlap) is reported per contrast under 'alternative_reading_background_plus_partial_wrong_overlap' and DISAGREES IN SIGN for H2 and H6a.",
+ "metric_direction": {
+  "matched_fp_recall": "higher is better",
+  "q25_macro_recall_iou50": "higher is better",
+  "map75": "higher is better",
+  "mean_matched_iou": "higher is better",
+  "taxonomy_background_or_spurious_count": "lower is better",
+  "taxonomy_background_or_spurious_per_image": "lower is better",
+  "op_p90_fp_per_image": "lower is better"
+ },
+ "reference_fp_per_image_C0Std": 0.05235231694375663,
+ "sanity_anchor": {
+  "arm": "C4-M@42 primary",
+  "recomputed_map50_95": 0.4043930717327209,
+  "expected_round5": 0.40439,
+  "match": true,
+  "evaluator": "faster-coco-eval"
+ },
+ "contrasts": {
+  "H1_core_annealing_vs_full_kd": {
+   "contrast": "C4-M minus C1-M",
+   "seeds": [
+    "42",
+    "1337",
+    "20260703"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": -0.002873563218390829,
+     "q25_macro_recall_iou50": -0.01609427609427605,
+     "map75": -0.010524889796291848,
+     "mean_matched_iou": -0.0027034771206894126,
+     "taxonomy_background_or_spurious_count": -18.0,
+     "taxonomy_background_or_spurious_per_image": -0.007050528789659224,
+     "op_p90_fp_per_image": -0.004308656482569527
+    },
+    "1337": {
+     "matched_fp_recall": -0.018199233716475083,
+     "q25_macro_recall_iou50": -0.05325554394519916,
+     "map75": -0.01854358159805425,
+     "mean_matched_iou": 6.403979585067887e-05,
+     "taxonomy_background_or_spurious_count": -6.0,
+     "taxonomy_background_or_spurious_per_image": -0.002350176263219742,
+     "op_p90_fp_per_image": 0.0054837446141794005
+    },
+    "20260703": {
+     "matched_fp_recall": 0.01867816091954022,
+     "q25_macro_recall_iou50": 0.019665621734587246,
+     "map75": 0.017483533660967998,
+     "mean_matched_iou": -0.005737463849698865,
+     "taxonomy_background_or_spurious_count": 4.0,
+     "taxonomy_background_or_spurious_per_image": 0.0015667841754798267,
+     "op_p90_fp_per_image": 0.005875440658049354
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": -0.0007982120051085636,
+    "q25_macro_recall_iou50": -0.016561399434962654,
+    "map75": -0.0038616459111260326,
+    "mean_matched_iou": -0.002792300391512533,
+    "taxonomy_background_or_spurious_count": -6.666666666666667,
+    "taxonomy_background_or_spurious_per_image": -0.0026113069591330463,
+    "op_p90_fp_per_image": 0.0023501762632197423
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.49233716475095785,
+      "q25_macro_recall_iou50": 0.40115406942993154,
+      "map75": 0.42533075438814233,
+      "mean_matched_iou": 0.8110315308367166,
+      "taxonomy_background_or_spurious_count": 14,
+      "taxonomy_background_or_spurious_per_image": 0.005483744614179397,
+      "op_p90_fp_per_image": 0.03172737955346651
+     },
+     "1337": {
+      "matched_fp_recall": 0.4870689655172414,
+      "q25_macro_recall_iou50": 0.37216417044003247,
+      "map75": 0.399835301262249,
+      "mean_matched_iou": 0.8124457247253523,
+      "taxonomy_background_or_spurious_count": 26,
+      "taxonomy_background_or_spurious_per_image": 0.010184097140618879,
+      "op_p90_fp_per_image": 0.04739522130826479
+     },
+     "20260703": {
+      "matched_fp_recall": 0.507183908045977,
+      "q25_macro_recall_iou50": 0.4208196911645188,
+      "map75": 0.4244606717193024,
+      "mean_matched_iou": 0.8080159160917725,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.05170387779083431
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.4952107279693487,
+      "q25_macro_recall_iou50": 0.4172483455242076,
+      "map75": 0.4358556441844342,
+      "mean_matched_iou": 0.813735007957406,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.036036036036036036
+     },
+     "1337": {
+      "matched_fp_recall": 0.5052681992337165,
+      "q25_macro_recall_iou50": 0.42541971438523163,
+      "map75": 0.4183788828603032,
+      "mean_matched_iou": 0.8123816849295016,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.04191147669408539
+     },
+     "20260703": {
+      "matched_fp_recall": 0.4885057471264368,
+      "q25_macro_recall_iou50": 0.40115406942993154,
+      "map75": 0.4069771380583344,
+      "mean_matched_iou": 0.8137533799414713,
+      "taxonomy_background_or_spurious_count": 28,
+      "taxonomy_background_or_spurious_per_image": 0.010967489228358794,
+      "op_p90_fp_per_image": 0.045828437132784956
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -20.0,
+      "alt_background_plus_partial_per_image": -0.007833920877399137
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -7.0,
+      "alt_background_plus_partial_per_image": -0.0027418723070896985
+     },
+     "20260703": {
+      "alt_background_plus_partial_count": 6.0,
+      "alt_background_plus_partial_per_image": 0.00235017626321974
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": -7.0,
+     "alt_background_plus_partial_per_image": -0.0027418723070896985
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": -0.0007982120051085636
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": -0.016561399434962654
+    },
+    "localization": {
+     "map75": -0.0038616459111260326,
+     "mean_matched_iou": -0.002792300391512533
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": -6.666666666666667,
+     "taxonomy_background_or_spurious_per_image": -0.0026113069591330463,
+     "op_p90_fp_per_image": 0.0023501762632197423
+    }
+   }
+  },
+  "H2_order_given_fixed_tail": {
+   "contrast": "C4-M minus C4MixFT-M",
+   "seeds": [
+    "42",
+    "1337"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": 0.008620689655172431,
+     "q25_macro_recall_iou50": -0.01743062812028323,
+     "map75": 0.012597573191619471,
+     "mean_matched_iou": 0.0010576572680722762,
+     "taxonomy_background_or_spurious_count": -8.0,
+     "taxonomy_background_or_spurious_per_image": -0.003133568350959655,
+     "op_p90_fp_per_image": -0.004700352526439487
+    },
+    "1337": {
+     "matched_fp_recall": -0.013409961685823701,
+     "q25_macro_recall_iou50": -0.044433995123650316,
+     "map75": -0.030297298769161596,
+     "mean_matched_iou": -0.0006043911990820661,
+     "taxonomy_background_or_spurious_count": 3.0,
+     "taxonomy_background_or_spurious_per_image": 0.00117508813160987,
+     "op_p90_fp_per_image": 0.004700352526439487
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": -0.002394636015325635,
+    "q25_macro_recall_iou50": -0.030932311621966774,
+    "map75": -0.008849862788771062,
+    "mean_matched_iou": 0.00022663303449510508,
+    "taxonomy_background_or_spurious_count": -2.5,
+    "taxonomy_background_or_spurious_per_image": -0.0009792401096748926,
+    "op_p90_fp_per_image": 0.0
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.49233716475095785,
+      "q25_macro_recall_iou50": 0.40115406942993154,
+      "map75": 0.42533075438814233,
+      "mean_matched_iou": 0.8110315308367166,
+      "taxonomy_background_or_spurious_count": 14,
+      "taxonomy_background_or_spurious_per_image": 0.005483744614179397,
+      "op_p90_fp_per_image": 0.03172737955346651
+     },
+     "1337": {
+      "matched_fp_recall": 0.4870689655172414,
+      "q25_macro_recall_iou50": 0.37216417044003247,
+      "map75": 0.399835301262249,
+      "mean_matched_iou": 0.8124457247253523,
+      "taxonomy_background_or_spurious_count": 26,
+      "taxonomy_background_or_spurious_per_image": 0.010184097140618879,
+      "op_p90_fp_per_image": 0.04739522130826479
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.4837164750957854,
+      "q25_macro_recall_iou50": 0.41858469755021477,
+      "map75": 0.41273318119652286,
+      "mean_matched_iou": 0.8099738735686444,
+      "taxonomy_background_or_spurious_count": 22,
+      "taxonomy_background_or_spurious_per_image": 0.008617312965139052,
+      "op_p90_fp_per_image": 0.036427732079905996
+     },
+     "1337": {
+      "matched_fp_recall": 0.5004789272030651,
+      "q25_macro_recall_iou50": 0.4165981655636828,
+      "map75": 0.4301326000314106,
+      "mean_matched_iou": 0.8130501159244343,
+      "taxonomy_background_or_spurious_count": 23,
+      "taxonomy_background_or_spurious_per_image": 0.009009009009009009,
+      "op_p90_fp_per_image": 0.0426948687818253
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -3.0,
+      "alt_background_plus_partial_per_image": -0.00117508813160987
+     },
+     "1337": {
+      "alt_background_plus_partial_count": 5.0,
+      "alt_background_plus_partial_per_image": 0.0019584802193497834
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": 1.0,
+     "alt_background_plus_partial_per_image": 0.0003916960438699567
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": -0.002394636015325635
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": -0.030932311621966774
+    },
+    "localization": {
+     "map75": -0.008849862788771062,
+     "mean_matched_iou": 0.00022663303449510508
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": -2.5,
+     "taxonomy_background_or_spurious_per_image": -0.0009792401096748926,
+     "op_p90_fp_per_image": 0.0
+    }
+   }
+  },
+  "H3_terminal_tail_content": {
+   "contrast": "C4MixFT-M minus C4Mix-M",
+   "seeds": [
+    "42",
+    "1337"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": 0.018199233716475083,
+     "q25_macro_recall_iou50": 0.0012771392081736277,
+     "map75": 0.002311730946174151,
+     "mean_matched_iou": -0.002360274021006581,
+     "taxonomy_background_or_spurious_count": -3.0,
+     "taxonomy_background_or_spurious_per_image": -0.00117508813160987,
+     "op_p90_fp_per_image": 0.013709361535448494
+    },
+    "1337": {
+     "matched_fp_recall": 0.001915708812260497,
+     "q25_macro_recall_iou50": 0.007148496458841247,
+     "map75": -0.0019175492196549238,
+     "mean_matched_iou": -0.00045221015257723707,
+     "taxonomy_background_or_spurious_count": -11.0,
+     "taxonomy_background_or_spurious_per_image": -0.004308656482569527,
+     "op_p90_fp_per_image": 0.004308656482569527
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": 0.01005747126436779,
+    "q25_macro_recall_iou50": 0.004212817833507437,
+    "map75": 0.00019709086325961356,
+    "mean_matched_iou": -0.001406242086791909,
+    "taxonomy_background_or_spurious_count": -7.0,
+    "taxonomy_background_or_spurious_per_image": -0.0027418723070896985,
+    "op_p90_fp_per_image": 0.00900900900900901
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.4837164750957854,
+      "q25_macro_recall_iou50": 0.41858469755021477,
+      "map75": 0.41273318119652286,
+      "mean_matched_iou": 0.8099738735686444,
+      "taxonomy_background_or_spurious_count": 22,
+      "taxonomy_background_or_spurious_per_image": 0.008617312965139052,
+      "op_p90_fp_per_image": 0.036427732079905996
+     },
+     "1337": {
+      "matched_fp_recall": 0.5004789272030651,
+      "q25_macro_recall_iou50": 0.4165981655636828,
+      "map75": 0.4301326000314106,
+      "mean_matched_iou": 0.8130501159244343,
+      "taxonomy_background_or_spurious_count": 23,
+      "taxonomy_background_or_spurious_per_image": 0.009009009009009009,
+      "op_p90_fp_per_image": 0.0426948687818253
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.46551724137931033,
+      "q25_macro_recall_iou50": 0.41730755834204114,
+      "map75": 0.4104214502503487,
+      "mean_matched_iou": 0.812334147589651,
+      "taxonomy_background_or_spurious_count": 25,
+      "taxonomy_background_or_spurious_per_image": 0.009792401096748922,
+      "op_p90_fp_per_image": 0.0227183705444575
+     },
+     "1337": {
+      "matched_fp_recall": 0.4985632183908046,
+      "q25_macro_recall_iou50": 0.40944966910484154,
+      "map75": 0.4320501492510655,
+      "mean_matched_iou": 0.8135023260770116,
+      "taxonomy_background_or_spurious_count": 34,
+      "taxonomy_background_or_spurious_per_image": 0.013317665491578536,
+      "op_p90_fp_per_image": 0.038386212299255776
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -1.0,
+      "alt_background_plus_partial_per_image": -0.0003916960438699567
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -8.0,
+      "alt_background_plus_partial_per_image": -0.003133568350959655
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": -4.5,
+     "alt_background_plus_partial_per_image": -0.001762632197414806
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": 0.01005747126436779
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": 0.004212817833507437
+    },
+    "localization": {
+     "map75": 0.00019709086325961356,
+     "mean_matched_iou": -0.001406242086791909
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": -7.0,
+     "taxonomy_background_or_spurious_per_image": -0.0027418723070896985,
+     "op_p90_fp_per_image": 0.00900900900900901
+    }
+   }
+  },
+  "H4_direction_joint": {
+   "contrast": "C4-M minus C4R-M",
+   "seeds": [
+    "42",
+    "1337"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": -0.004789272030651326,
+     "q25_macro_recall_iou50": 0.016342737722048084,
+     "map75": -0.01445597371636409,
+     "mean_matched_iou": -0.005276073839776241,
+     "taxonomy_background_or_spurious_count": -10.0,
+     "taxonomy_background_or_spurious_per_image": -0.003916960438699569,
+     "op_p90_fp_per_image": -0.00235017626321974
+    },
+    "1337": {
+     "matched_fp_recall": 0.0,
+     "q25_macro_recall_iou50": 0.020044119354464207,
+     "map75": -0.011214976460922677,
+     "mean_matched_iou": -0.0019451162910043562,
+     "taxonomy_background_or_spurious_count": -5.0,
+     "taxonomy_background_or_spurious_per_image": -0.001958480219349785,
+     "op_p90_fp_per_image": 0.009400705052878967
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": -0.002394636015325663,
+    "q25_macro_recall_iou50": 0.018193428538256146,
+    "map75": -0.012835475088643383,
+    "mean_matched_iou": -0.0036105950653902985,
+    "taxonomy_background_or_spurious_count": -7.5,
+    "taxonomy_background_or_spurious_per_image": -0.002937720329024677,
+    "op_p90_fp_per_image": 0.0035252643948296136
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.49233716475095785,
+      "q25_macro_recall_iou50": 0.40115406942993154,
+      "map75": 0.42533075438814233,
+      "mean_matched_iou": 0.8110315308367166,
+      "taxonomy_background_or_spurious_count": 14,
+      "taxonomy_background_or_spurious_per_image": 0.005483744614179397,
+      "op_p90_fp_per_image": 0.03172737955346651
+     },
+     "1337": {
+      "matched_fp_recall": 0.4870689655172414,
+      "q25_macro_recall_iou50": 0.37216417044003247,
+      "map75": 0.399835301262249,
+      "mean_matched_iou": 0.8124457247253523,
+      "taxonomy_background_or_spurious_count": 26,
+      "taxonomy_background_or_spurious_per_image": 0.010184097140618879,
+      "op_p90_fp_per_image": 0.04739522130826479
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.49712643678160917,
+      "q25_macro_recall_iou50": 0.38481133170788345,
+      "map75": 0.4397867281045064,
+      "mean_matched_iou": 0.8163076046764929,
+      "taxonomy_background_or_spurious_count": 24,
+      "taxonomy_background_or_spurious_per_image": 0.009400705052878966,
+      "op_p90_fp_per_image": 0.03407755581668625
+     },
+     "1337": {
+      "matched_fp_recall": 0.4870689655172414,
+      "q25_macro_recall_iou50": 0.35212005108556826,
+      "map75": 0.41105027772317165,
+      "mean_matched_iou": 0.8143908410163566,
+      "taxonomy_background_or_spurious_count": 31,
+      "taxonomy_background_or_spurious_per_image": 0.012142577359968664,
+      "op_p90_fp_per_image": 0.03799451625538582
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -4.0,
+      "alt_background_plus_partial_per_image": -0.0015667841754798267
+     },
+     "1337": {
+      "alt_background_plus_partial_count": 1.0,
+      "alt_background_plus_partial_per_image": 0.0003916960438699567
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": -1.5,
+     "alt_background_plus_partial_per_image": -0.000587544065804935
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": -0.002394636015325663
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": 0.018193428538256146
+    },
+    "localization": {
+     "map75": -0.012835475088643383,
+     "mean_matched_iou": -0.0036105950653902985
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": -7.5,
+     "taxonomy_background_or_spurious_per_image": -0.002937720329024677,
+     "op_p90_fp_per_image": 0.0035252643948296136
+    }
+   }
+  },
+  "H5_kd_usefulness": {
+   "contrast": "C1-M minus C0-R",
+   "seeds": [
+    "42",
+    "1337",
+    "20260703"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": -0.00047892720306513814,
+     "q25_macro_recall_iou50": 0.03231278300243812,
+     "map75": 0.0026428348146864122,
+     "mean_matched_iou": 1.339385169174534e-05,
+     "taxonomy_background_or_spurious_count": 2.0,
+     "taxonomy_background_or_spurious_per_image": 0.0007833920877399134,
+     "op_p90_fp_per_image": -0.010575793184488834
+    },
+    "1337": {
+     "matched_fp_recall": 0.011015325670498066,
+     "q25_macro_recall_iou50": 0.06339022407987932,
+     "map75": -0.00787359887556155,
+     "mean_matched_iou": -0.004264624026859565,
+     "taxonomy_background_or_spurious_count": -8.0,
+     "taxonomy_background_or_spurious_per_image": -0.003133568350959657,
+     "op_p90_fp_per_image": -0.0015667841754798267
+    },
+    "20260703": {
+     "matched_fp_recall": 0.011973180076628342,
+     "q25_macro_recall_iou50": 0.042719145477766174,
+     "map75": -0.028340890632363724,
+     "mean_matched_iou": 0.000411141808694504,
+     "taxonomy_background_or_spurious_count": -6.0,
+     "taxonomy_background_or_spurious_per_image": -0.002350176263219742,
+     "op_p90_fp_per_image": 0.013317665491578534
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": 0.0075031928480204235,
+    "q25_macro_recall_iou50": 0.04614071752002787,
+    "map75": -0.011190551564412954,
+    "mean_matched_iou": -0.0012800294554911051,
+    "taxonomy_background_or_spurious_count": -4.0,
+    "taxonomy_background_or_spurious_per_image": -0.0015667841754798285,
+    "op_p90_fp_per_image": 0.0003916960438699578
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.4952107279693487,
+      "q25_macro_recall_iou50": 0.4172483455242076,
+      "map75": 0.4358556441844342,
+      "mean_matched_iou": 0.813735007957406,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.036036036036036036
+     },
+     "1337": {
+      "matched_fp_recall": 0.5052681992337165,
+      "q25_macro_recall_iou50": 0.42541971438523163,
+      "map75": 0.4183788828603032,
+      "mean_matched_iou": 0.8123816849295016,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.04191147669408539
+     },
+     "20260703": {
+      "matched_fp_recall": 0.4885057471264368,
+      "q25_macro_recall_iou50": 0.40115406942993154,
+      "map75": 0.4069771380583344,
+      "mean_matched_iou": 0.8137533799414713,
+      "taxonomy_background_or_spurious_count": 28,
+      "taxonomy_background_or_spurious_per_image": 0.010967489228358794,
+      "op_p90_fp_per_image": 0.045828437132784956
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.4956896551724138,
+      "q25_macro_recall_iou50": 0.38493556252176947,
+      "map75": 0.43321280936974776,
+      "mean_matched_iou": 0.8137216141057143,
+      "taxonomy_background_or_spurious_count": 30,
+      "taxonomy_background_or_spurious_per_image": 0.011750881316098707,
+      "op_p90_fp_per_image": 0.04661182922052487
+     },
+     "1337": {
+      "matched_fp_recall": 0.4942528735632184,
+      "q25_macro_recall_iou50": 0.3620294903053523,
+      "map75": 0.4262524817358648,
+      "mean_matched_iou": 0.8166463089563611,
+      "taxonomy_background_or_spurious_count": 40,
+      "taxonomy_background_or_spurious_per_image": 0.015667841754798278,
+      "op_p90_fp_per_image": 0.043478260869565216
+     },
+     "20260703": {
+      "matched_fp_recall": 0.47653256704980845,
+      "q25_macro_recall_iou50": 0.35843492395216536,
+      "map75": 0.43531802869069813,
+      "mean_matched_iou": 0.8133422381327768,
+      "taxonomy_background_or_spurious_count": 34,
+      "taxonomy_background_or_spurious_per_image": 0.013317665491578536,
+      "op_p90_fp_per_image": 0.03251077164120642
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": 2.0,
+      "alt_background_plus_partial_per_image": 0.0007833920877399134
+     },
+     "1337": {
+      "alt_background_plus_partial_count": -7.0,
+      "alt_background_plus_partial_per_image": -0.0027418723070897003
+     },
+     "20260703": {
+      "alt_background_plus_partial_count": -5.0,
+      "alt_background_plus_partial_per_image": -0.0019584802193497834
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": -3.3333333333333335,
+     "alt_background_plus_partial_per_image": -0.0013056534795665234
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": 0.0075031928480204235
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": 0.04614071752002787
+    },
+    "localization": {
+     "map75": -0.011190551564412954,
+     "mean_matched_iou": -0.0012800294554911051
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": -4.0,
+     "taxonomy_background_or_spurious_per_image": -0.0015667841754798285,
+     "op_p90_fp_per_image": 0.0003916960438699578
+    }
+   }
+  },
+  "H6a_projection_single_view": {
+   "contrast": "C2-M minus C1-M",
+   "seeds": [
+    "42"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": 0.011973180076628342,
+     "q25_macro_recall_iou50": -0.014356205735516103,
+     "map75": 0.004188130687891534,
+     "mean_matched_iou": 0.0014504313863423768,
+     "taxonomy_background_or_spurious_count": 0.0,
+     "taxonomy_background_or_spurious_per_image": 0.0,
+     "op_p90_fp_per_image": 0.0
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": 0.011973180076628342,
+    "q25_macro_recall_iou50": -0.014356205735516103,
+    "map75": 0.004188130687891534,
+    "mean_matched_iou": 0.0014504313863423768,
+    "taxonomy_background_or_spurious_count": 0.0,
+    "taxonomy_background_or_spurious_per_image": 0.0,
+    "op_p90_fp_per_image": 0.0
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.507183908045977,
+      "q25_macro_recall_iou50": 0.4028921397886915,
+      "map75": 0.4400437748723257,
+      "mean_matched_iou": 0.8151854393437484,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.036036036036036036
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.4952107279693487,
+      "q25_macro_recall_iou50": 0.4172483455242076,
+      "map75": 0.4358556441844342,
+      "mean_matched_iou": 0.813735007957406,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.036036036036036036
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -4.0,
+      "alt_background_plus_partial_per_image": -0.0015667841754798267
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": -4.0,
+     "alt_background_plus_partial_per_image": -0.0015667841754798267
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": 0.011973180076628342
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": -0.014356205735516103
+    },
+    "localization": {
+     "map75": 0.004188130687891534,
+     "mean_matched_iou": 0.0014504313863423768
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": 0.0,
+     "taxonomy_background_or_spurious_per_image": 0.0,
+     "op_p90_fp_per_image": 0.0
+    }
+   }
+  },
+  "H6b_projection_group_view": {
+   "contrast": "C3-M minus C1-M",
+   "seeds": [
+    "42"
+   ],
+   "per_seed": {
+    "42": {
+     "matched_fp_recall": -0.012931034482758619,
+     "q25_macro_recall_iou50": -0.031538372228027356,
+     "map75": -0.008454863161910353,
+     "mean_matched_iou": -0.00028603779294633647,
+     "taxonomy_background_or_spurious_count": -11.0,
+     "taxonomy_background_or_spurious_per_image": -0.004308656482569525,
+     "op_p90_fp_per_image": 0.007050528789659227
+    }
+   },
+   "mean_delta": {
+    "matched_fp_recall": -0.012931034482758619,
+    "q25_macro_recall_iou50": -0.031538372228027356,
+    "map75": -0.008454863161910353,
+    "mean_matched_iou": -0.00028603779294633647,
+    "taxonomy_background_or_spurious_count": -11.0,
+    "taxonomy_background_or_spurious_per_image": -0.004308656482569525,
+    "op_p90_fp_per_image": 0.007050528789659227
+   },
+   "arm_values": {
+    "treatment": {
+     "42": {
+      "matched_fp_recall": 0.48227969348659006,
+      "q25_macro_recall_iou50": 0.38570997329618023,
+      "map75": 0.4274007810225238,
+      "mean_matched_iou": 0.8134489701644597,
+      "taxonomy_background_or_spurious_count": 21,
+      "taxonomy_background_or_spurious_per_image": 0.008225616921269096,
+      "op_p90_fp_per_image": 0.04308656482569526
+     }
+    },
+    "reference": {
+     "42": {
+      "matched_fp_recall": 0.4952107279693487,
+      "q25_macro_recall_iou50": 0.4172483455242076,
+      "map75": 0.4358556441844342,
+      "mean_matched_iou": 0.813735007957406,
+      "taxonomy_background_or_spurious_count": 32,
+      "taxonomy_background_or_spurious_per_image": 0.01253427340383862,
+      "op_p90_fp_per_image": 0.036036036036036036
+     }
+    }
+   },
+   "missing": [],
+   "alternative_reading_background_plus_partial_wrong_overlap": {
+    "note": "NOT the frozen metric. Literal-English alternative that folds partial_wrong_overlap into 'spurious'. Shown because it flips the sign of this outcome for H2 and H6a.",
+    "per_seed": {
+     "42": {
+      "alt_background_plus_partial_count": -17.0,
+      "alt_background_plus_partial_per_image": -0.006658832745789267
+     }
+    },
+    "mean_delta": {
+     "alt_background_plus_partial_count": -17.0,
+     "alt_background_plus_partial_per_image": -0.006658832745789267
+    }
+   },
+   "four_part_summary": {
+    "recall": {
+     "matched_fp_recall": -0.012931034482758619
+    },
+    "small_objects": {
+     "q25_macro_recall_iou50": -0.031538372228027356
+    },
+    "localization": {
+     "map75": -0.008454863161910353,
+     "mean_matched_iou": -0.00028603779294633647
+    },
+    "false_positives": {
+     "taxonomy_background_or_spurious_count": -11.0,
+     "taxonomy_background_or_spurious_per_image": -0.004308656482569525,
+     "op_p90_fp_per_image": 0.007050528789659227
+    }
+   }
+  }
+ }
+}
