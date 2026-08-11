@@ -148,7 +148,7 @@ With every optional dependency installed:
 
 ```
 ................                                                         [100%]
-16 passed in 0.18s
+18 passed in 0.35s
 ```
 
 With only `pytest` installed (no PyYAML, no faster-coco-eval, no torch):
@@ -156,7 +156,7 @@ With only `pytest` installed (no PyYAML, no faster-coco-eval, no torch):
 ```
 ...........                                                              [100%]
 SKIPPED [1] tests/test_bootstrap_duplicate_ids.py:42: faster-coco-eval is not installed; ...
-11 passed, 1 skipped in 0.02s
+13 passed, 1 skipped in 0.06s
 ```
 
 `test_schedule_multiset.py` and `test_expected_statistics.py` **must pass in
@@ -199,3 +199,23 @@ With matplotlib: writes `figures/fig_factorial_order_effect.pdf`,
 Without it: prints the same numbers as text. Either way it ends with the
 explicit list of paper figures that are **not** regenerable from this release
 (Figs. 1, 2, 3, 4, 5A-validation-half, 6) and why.
+
+
+### Locked-test bootstrap — achieved significance levels
+
+`reproduce_tables.py` also prints, from `bootstrap_replicates.csv`:
+
+```
+LOCKED-TEST BOOTSTRAP: ACHIEVED SIGNIFICANCE LEVELS
+        B = 1000; Holm over the frozen family of 7
+contrast     observed  boot mean  uncentred  centred p
+H1           -0.00853   -0.00827      0.046      0.037
+H2           -0.00911   -0.00906      0.098      0.113
+H3           +0.00530   +0.00558      0.284      0.301
+H4           -0.00508   -0.00482      0.350      0.332
+H5           +0.00161   +0.00182      0.678      0.713
+Holm-adjusted: H1=0.259  H2=0.677  H3=1.000  H4=1.000  H5=1.000
+```
+
+The uncentred column is printed only to show why it is NOT a p-value; the
+centred (null-shifted) column is what the manuscript reports.

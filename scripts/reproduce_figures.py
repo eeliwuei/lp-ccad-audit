@@ -111,7 +111,7 @@ def main() -> int:
     except ImportError:
         print("matplotlib is not installed; no figures were written.")
         print("  pip install matplotlib  then re-run, or read the values below.\n")
-        print("Fig. 5B  order main effect (val mAP50-95, seed-blocked)")
+        print("Fig. 5B  order-axis contrast (val mAP50-95, seed-blocked)")
         for s, e in zip(SEEDS, effects):
             print(f"  seed {s:<10} {e:+.5f}")
         print(f"  mean {mean:+.5f}   95% paired-t CI [{mean - hw:+.5f}, {mean + hw:+.5f}]"
