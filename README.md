@@ -47,8 +47,10 @@ frozen archive bytes. The portable tests verify those digests, the number and
 
 ## Release and citation status
 
-This directory is release `v2.0-plos-rev2`, accompanying the confirmation-audit manuscript prepared for PLOS ONE. It is published under the MIT license (see `LICENSE`); see `CITATION.cff` for citation metadata.
+This directory is release `v2.0.2-plos-rev2`, accompanying the confirmation-audit manuscript prepared for PLOS ONE. It is published under the MIT license (see `LICENSE`); see `CITATION.cff` for citation metadata. The content of this release is identical to the `S5_File.zip` Supporting Information archive submitted with the manuscript; the per-file checksums in `SHA256SUMS` bind both copies.
 
 ## Release history
 
-- `v2.0-plos-rev2` (2026-08-29): current release, accompanying the confirmation-audit manuscript prepared for PLOS ONE. It supersedes the framing in tags `v1.0-submission`, `v1.0.1-submission`, and `v1.1-submission`, whose README described a "locked test", a "single consumed pass", and a randomized follow-up under an earlier journal submission; those descriptions are superseded by the bounded confirmation-audit framing in this release. The old tags are preserved unchanged as a historical record.
+- `v2.0.2-plos-rev2` (2026-08-29): current release. Synchronizes the repository metadata and README with the PLOS ONE submission; no data or analysis change relative to `v2.0.1-plos-rev2`.
+- `v2.0.1-plos-rev2` (2026-08-29): raised figure text sizes to the PLOS 8 pt minimum and regenerated Fig 1-Fig 4; no data or analysis change.
+- `v2.0-plos-rev2` (2026-08-29): confirmation-audit release accompanying the manuscript prepared for PLOS ONE. It supersedes the framing in tags `v1.0-submission`, `v1.0.1-submission`, and `v1.1-submission`, whose README described a "locked test", a "single consumed pass", and a randomized follow-up under an earlier journal submission; those descriptions are superseded by the bounded confirmation-audit framing. The old tags are preserved unchanged as a historical record.
