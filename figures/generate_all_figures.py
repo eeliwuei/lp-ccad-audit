@@ -42,8 +42,12 @@ def svg_start(width: int, height: int) -> list[str]:
     ]
 
 
+MIN_TEXT_SIZE = 27  # keeps rendered text at or above 8 pt at the 7.5 in publication width
+
+
 def text(x: float, y: float, value: object, size: int = 30, weight: int = 400,
          anchor: str = "start", fill: str = INK, style: str = "") -> str:
+    size = max(size, MIN_TEXT_SIZE)
     return (f'<text x="{x:.1f}" y="{y:.1f}" font-family="{FONT}" font-size="{size}" '
             f'font-weight="{weight}" text-anchor="{anchor}" fill="{fill}" {style}>{esc(value)}</text>')
 
@@ -101,6 +105,8 @@ def render_tiff(svg_path: Path, output_path: Path, pixel_width: int = 2250) -> N
 
 
 def make_fig1() -> tuple[Path, Path]:
+    global MIN_TEXT_SIZE
+    MIN_TEXT_SIZE = 27
     w, h = 1800, 780
     p = svg_start(w, h)
     boxes = [(70, 110, 330, 145, "Teacher logits", "frozen"),
@@ -132,6 +138,8 @@ def make_fig2(rows: list[dict[str, str]]) -> tuple[Path, Path]:
     segments = [r for r in rows if r["record_type"] == "schedule_segment"]
     exposure = {r["condition"]: float(r["value"]) for r in rows if r["record_type"] == "schedule_exposure"}
     segments.sort(key=lambda r: float(r["ci95_low"]))
+    global MIN_TEXT_SIZE
+    MIN_TEXT_SIZE = 27
     w, h = 1800, 750
     p = svg_start(w, h)
     left, right, top = 170, 1680, 110
@@ -169,6 +177,8 @@ def make_fig2(rows: list[dict[str, str]]) -> tuple[Path, Path]:
 
 def make_fig3(rows: list[dict[str, str]]) -> tuple[Path, Path]:
     values = {r["record_id"]: float(r["value"]) for r in rows if r["value"] not in ("", None)}
+    global MIN_TEXT_SIZE
+    MIN_TEXT_SIZE = 27
     w, h = 1800, 1040
     p = svg_start(w, h)
     y_min, y_max = -0.03, 0.015
@@ -224,6 +234,8 @@ def make_fig4(rows: list[dict[str, str]]) -> tuple[Path, Path]:
     selected = {r["record_id"]: r for r in rows if r["record_id"].startswith("FOLLOWUP_")}
     names = ["order_axis_composite", "tail_axis_composite", "difference_of_differences_composite"]
     labels = ["Order-axis\ncomposite", "Tail-axis\ncomposite", "Difference-of-\ndifferences"]
+    global MIN_TEXT_SIZE
+    MIN_TEXT_SIZE = 24
     w, h = 1600, 1000
     p = svg_start(w, h)
     left, right, top, bottom = 170, 1470, 120, 820

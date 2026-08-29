@@ -47,13 +47,13 @@
 <polygon points="1248.0,584.4 1236.0,608.4 1260.0,608.4" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
 <text x="1220.0" y="875.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >Difference-of-</text>
 <text x="1220.0" y="908.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >differences</text>
-<text x="1270.0" y="376.7" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#52606D" >retrospective +/-0.01 region</text>
+<text x="1270.0" y="376.7" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#52606D" >retrospective +/-0.01 region</text>
 <circle cx="250.0" cy="960.0" r="10" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="272.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >seed 42</text>
+<text x="272.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#1F2933" >seed 42</text>
 <rect x="430.0" y="950.0" width="20.0" height="20.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
-<text x="462.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >seed 1337</text>
+<text x="462.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#1F2933" >seed 1337</text>
 <polygon points="670.0,950.0 660.0,970.0 680.0,970.0" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="692.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >seed 20260703</text>
+<text x="692.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#1F2933" >seed 20260703</text>
 <rect x="970.0" y="950.0" width="20.0" height="20.0" fill="#B6493A" stroke="#B6493A" stroke-width="3"/>
-<text x="1002.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >mean and descriptive 95% interval</text>
+<text x="1002.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#1F2933" >mean and descriptive 95% interval</text>
 </svg>

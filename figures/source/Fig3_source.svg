@@ -16,40 +16,40 @@
 <line x1="1030.0" y1="555.6" x2="1650.0" y2="555.6" stroke="#CBD2D9" stroke-width="1.5"/>
 <line x1="1030.0" y1="393.3" x2="1650.0" y2="393.3" stroke="#1F2933" stroke-width="3"/>
 <line x1="1030.0" y1="231.1" x2="1650.0" y2="231.1" stroke="#CBD2D9" stroke-width="1.5"/>
-<text x="125.0" y="889.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >-0.030</text>
-<text x="125.0" y="726.8" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >-0.020</text>
-<text x="125.0" y="564.6" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >-0.010</text>
-<text x="125.0" y="402.3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >0</text>
-<text x="125.0" y="240.1" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >+0.010</text>
+<text x="125.0" y="889.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="end" fill="#52606D" >-0.030</text>
+<text x="125.0" y="726.8" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="end" fill="#52606D" >-0.020</text>
+<text x="125.0" y="564.6" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="end" fill="#52606D" >-0.010</text>
+<text x="125.0" y="402.3" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="end" fill="#52606D" >0</text>
+<text x="125.0" y="240.1" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="end" fill="#52606D" >+0.010</text>
 <text x="42.0" y="515.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" transform="rotate(-90 42 515)">C4-M minus C4MixFT-M (mAP50-95)</text>
 <text x="150.0" y="95.0" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#1F2933" >A. Development validation</text>
 <text x="1030.0" y="95.0" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#1F2933" >B. Evaluation-composition sensitivity</text>
 <circle cx="280.0" cy="205.3" r="15" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="280.0" y="177.3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.011590</text>
-<text x="280.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 42</text>
+<text x="280.0" y="177.3" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.011590</text>
+<text x="280.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 42</text>
 <rect x="485.0" y="240.0" width="30.0" height="30.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
-<text x="500.0" y="227.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.008530</text>
-<text x="500.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 1337</text>
+<text x="500.0" y="227.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.008530</text>
+<text x="500.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 1337</text>
 <polygon points="720.0,261.0 705.0,291.0 735.0,291.0" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="720.0" y="248.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.007230</text>
-<text x="720.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 20260703</text>
-<text x="720.0" y="966.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="middle" fill="#52606D" >post hoc</text>
+<text x="720.0" y="248.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.007230</text>
+<text x="720.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 20260703</text>
+<text x="720.0" y="966.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >post hoc</text>
 <line x1="1170.0" y1="302.6" x2="1510.0" y2="309.7" stroke="#236A8A" stroke-width="4"/>
 <circle cx="1170.0" cy="302.6" r="15" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
 <circle cx="1510.0" cy="309.7" r="15" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1170.0" y="274.6" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.005594</text>
-<text x="1510.0" y="352.7" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.005158</text>
+<text x="1170.0" y="274.6" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.005594</text>
+<text x="1510.0" y="352.7" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.005158</text>
 <line x1="1170.0" y1="779.7" x2="1510.0" y2="782.5" stroke="#D07922" stroke-width="4"/>
 <rect x="1155.0" y="764.7" width="30.0" height="30.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
 <rect x="1495.0" y="767.5" width="30.0" height="30.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1170.0" y="751.7" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle" fill="#1F2933" >-0.023817</text>
-<text x="1510.0" y="825.5" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle" fill="#1F2933" >-0.023987</text>
-<text x="1170.0" y="925.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#1F2933" >Original</text>
-<text x="1170.0" y="958.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="middle" fill="#52606D" >2,553 images</text>
-<text x="1510.0" y="925.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#1F2933" >Source-excluded</text>
-<text x="1510.0" y="958.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="middle" fill="#52606D" >2,019 images</text>
+<text x="1170.0" y="751.7" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >-0.023817</text>
+<text x="1510.0" y="825.5" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >-0.023987</text>
+<text x="1170.0" y="925.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >Original</text>
+<text x="1170.0" y="958.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >2,553 images</text>
+<text x="1510.0" y="925.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >Source-excluded</text>
+<text x="1510.0" y="958.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >2,019 images</text>
 <circle cx="1070.0" cy="1010.0" r="11" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1095.0" y="1018.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#1F2933" >seed 42</text>
+<text x="1095.0" y="1018.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#1F2933" >seed 42</text>
 <rect x="1269.0" y="999.0" width="22.0" height="22.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
-<text x="1305.0" y="1018.0" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#1F2933" >seed 1337</text>
+<text x="1305.0" y="1018.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#1F2933" >seed 1337</text>
 </svg>

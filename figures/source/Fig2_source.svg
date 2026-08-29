@@ -4,39 +4,39 @@
 <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1F2933"/></marker></defs>
 <rect x="170.0" y="110.0" width="302.0" height="150.0" rx="0" fill="#DCEAF2" stroke="#FFFFFF" stroke-width="2"/>
 <text x="321.0" y="172.0" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" fill="#1F2933" >full</text>
-<text x="321.0" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#52606D" >3 active coordinates</text>
+<text x="321.0" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >3 active coordinates</text>
 <rect x="472.0" y="110.0" width="402.7" height="150.0" rx="0" fill="#B9D5E4" stroke="#FFFFFF" stroke-width="2"/>
 <text x="673.3" y="172.0" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" fill="#1F2933" >group</text>
-<text x="673.3" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#52606D" >2 active coordinates</text>
+<text x="673.3" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >2 active coordinates</text>
 <rect x="874.7" y="110.0" width="402.7" height="150.0" rx="0" fill="#8FBBD0" stroke="#FFFFFF" stroke-width="2"/>
 <text x="1076.0" y="172.0" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" fill="#1F2933" >pairwise</text>
-<text x="1076.0" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#52606D" >2 active coordinates</text>
+<text x="1076.0" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >2 active coordinates</text>
 <rect x="1277.3" y="110.0" width="402.7" height="150.0" rx="0" fill="#5F9AB8" stroke="#FFFFFF" stroke-width="2"/>
 <text x="1478.7" y="172.0" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" text-anchor="middle" fill="#1F2933" >single tail</text>
-<text x="1478.7" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#52606D" >1 active coordinate</text>
+<text x="1478.7" y="220.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >1 active coordinate</text>
 <line x1="170.0" y1="280.0" x2="1680.0" y2="280.0" stroke="#1F2933" stroke-width="3"/>
 <line x1="170.0" y1="272.0" x2="170.0" y2="290.0" stroke="#1F2933" stroke-width="2"/>
-<text x="170.0" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#52606D" >0</text>
+<text x="170.0" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >0</text>
 <line x1="472.0" y1="272.0" x2="472.0" y2="290.0" stroke="#1F2933" stroke-width="2"/>
-<text x="472.0" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#52606D" >30</text>
+<text x="472.0" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >30</text>
 <line x1="874.7" y1="272.0" x2="874.7" y2="290.0" stroke="#1F2933" stroke-width="2"/>
-<text x="874.7" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#52606D" >70</text>
+<text x="874.7" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >70</text>
 <line x1="1277.3" y1="272.0" x2="1277.3" y2="290.0" stroke="#1F2933" stroke-width="2"/>
-<text x="1277.3" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#52606D" >110</text>
+<text x="1277.3" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >110</text>
 <line x1="1680.0" y1="272.0" x2="1680.0" y2="290.0" stroke="#1F2933" stroke-width="2"/>
-<text x="1680.0" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#52606D" >150</text>
+<text x="1680.0" y="330.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >150</text>
 <text x="925.0" y="375.0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="500" text-anchor="middle" fill="#1F2933" >Epoch</text>
 <text x="170.0" y="470.0" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start" fill="#1F2933" >Nominal coordinate exposure</text>
-<text x="170.0" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="start" fill="#1F2933" >knife</text>
+<text x="170.0" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="start" fill="#1F2933" >knife</text>
 <rect x="315.0" y="535.0" width="1200.0" height="34.0" rx="0" fill="#EFF3F6" stroke="#D8DEE4" stroke-width="1"/>
 <rect x="315.0" y="535.0" width="992.0" height="34.0" rx="0" fill="#236A8A" stroke="none" stroke-width="0"/>
-<text x="1540.0" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="500" text-anchor="start" fill="#1F2933" >124 epochs</text>
-<text x="170.0" y="624.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="start" fill="#1F2933" >gun</text>
+<text x="1540.0" y="562.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="start" fill="#1F2933" >124 epochs</text>
+<text x="170.0" y="624.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="start" fill="#1F2933" >gun</text>
 <rect x="315.0" y="597.0" width="1200.0" height="34.0" rx="0" fill="#EFF3F6" stroke="#D8DEE4" stroke-width="1"/>
 <rect x="315.0" y="597.0" width="664.0" height="34.0" rx="0" fill="#D07922" stroke="none" stroke-width="0"/>
-<text x="1540.0" y="624.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="500" text-anchor="start" fill="#1F2933" >83 epochs</text>
-<text x="170.0" y="686.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="start" fill="#1F2933" >stick</text>
+<text x="1540.0" y="624.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="start" fill="#1F2933" >83 epochs</text>
+<text x="170.0" y="686.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="start" fill="#1F2933" >stick</text>
 <rect x="315.0" y="659.0" width="1200.0" height="34.0" rx="0" fill="#EFF3F6" stroke="#D8DEE4" stroke-width="1"/>
 <rect x="315.0" y="659.0" width="664.0" height="34.0" rx="0" fill="#2F855A" stroke="none" stroke-width="0"/>
-<text x="1540.0" y="686.0" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="500" text-anchor="start" fill="#1F2933" >83 epochs</text>
+<text x="1540.0" y="686.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="start" fill="#1F2933" >83 epochs</text>
 </svg>
