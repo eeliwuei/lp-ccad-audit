@@ -1,0 +1,12 @@
+{
+  "historical_magnitude_rule": 0.0171,
+  "validation_protocol_records": [
+    "VAL_H2_42",
+    "VAL_H2_1337"
+  ],
+  "validation_all_records": [
+    "VAL_H2_42",
+    "VAL_H2_1337",
+    "VAL_H2_20260703"
+  ]
+}

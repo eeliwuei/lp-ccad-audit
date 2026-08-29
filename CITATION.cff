@@ -1,45 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this software or its released results, please cite the paper below."
-title: "LP-CCAD Audit: reproducibility release"
-abstract: >-
-  Frozen results, configurations and analysis code for an audit of label-space
-  curriculum distillation (LP-CCAD). A validation ordering signal that
-  replicated across three seeds failed a prospectively locked test and a
-  randomized follow-up matched on nominal exposure; the audit framework is
-  the contribution.
-  No dataset, imagery or checkpoint is included.
+message: "If you use this software, please cite it using these metadata."
+title: "LP-CCAD multi-axis confirmation audit: analytical replay"
 type: software
 authors:
   - family-names: "Liu"
     given-names: "Wei"
-    affiliation: "DeepFarm Inc., Seoul, Republic of Korea"
-    email: "liuwei1108@deepfarm.net"
   - family-names: "Jang"
     given-names: "Seojin"
-    affiliation: "DeepFarm Inc., Seoul, Republic of Korea"
-    email: "seojinygud@deepfarm.net"
-license-url: "https://github.com/eeliwuei/lp-ccad-audit/blob/main/LICENSE"
+version: "2.0.0"
+repository-code: "https://github.com/eeliwuei/lp-ccad-audit"
+abstract: "Portable analytical replay and figure-generation materials for the LP-CCAD multi-axis confirmation audit. No raw media or end-to-end training reproduction is included."
 keywords:
   - knowledge distillation
-  - object detection
   - curriculum learning
   - reproducibility
-  - equivalence testing
-  - research auditing
-preferred-citation:
-  type: article
-  status: unpublished
-  title: >-
-    Auditing Label-Space Curriculum Distillation: A Validation Ordering Signal
-    Fails a Locked Test and a Randomized Follow-Up
-  authors:
-    - family-names: "Liu"
-      given-names: "Wei"
-    - given-names: "Seojin"
-      family-names: "Jang"
-  year: 2026
-  notes: >-
-    Unpublished manuscript, not peer reviewed; prepared for submission to
-    Machine Learning with Applications. Venue, volume, pages and DOI to be
-    added if and when published.
+  - object detection
 license: MIT

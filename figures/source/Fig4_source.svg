@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#1F2933"/></marker></defs>
+<rect x="170" y="353.3" width="1300" height="233.3" fill="#EEF2F6"/>
+<line x1="170.0" y1="820.0" x2="1470.0" y2="820.0" stroke="#CBD2D9" stroke-width="1.5"/>
+<text x="145.0" y="829.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >-0.030</text>
+<line x1="170.0" y1="703.3" x2="1470.0" y2="703.3" stroke="#CBD2D9" stroke-width="1.5"/>
+<text x="145.0" y="712.3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >-0.020</text>
+<line x1="170.0" y1="586.7" x2="1470.0" y2="586.7" stroke="#CBD2D9" stroke-width="1.5"/>
+<text x="145.0" y="595.7" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >-0.010</text>
+<line x1="170.0" y1="470.0" x2="1470.0" y2="470.0" stroke="#1F2933" stroke-width="3"/>
+<text x="145.0" y="479.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >0</text>
+<line x1="170.0" y1="353.3" x2="1470.0" y2="353.3" stroke="#CBD2D9" stroke-width="1.5"/>
+<text x="145.0" y="362.3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >+0.010</text>
+<line x1="170.0" y1="236.7" x2="1470.0" y2="236.7" stroke="#CBD2D9" stroke-width="1.5"/>
+<text x="145.0" y="245.7" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >+0.020</text>
+<line x1="170.0" y1="120.0" x2="1470.0" y2="120.0" stroke="#CBD2D9" stroke-width="1.5"/>
+<text x="145.0" y="129.0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="end" fill="#52606D" >+0.030</text>
+<line x1="170.0" y1="120.0" x2="170.0" y2="820.0" stroke="#52606D" stroke-width="2"/>
+<line x1="170.0" y1="820.0" x2="1470.0" y2="820.0" stroke="#52606D" stroke-width="2"/>
+<text x="48.0" y="470.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" transform="rotate(-90 48 470)">Composite contrast (mAP50-95)</text>
+<line x1="420.0" y1="623.4" x2="420.0" y2="340.9" stroke="#B6493A" stroke-width="5"/>
+<line x1="404.0" y1="623.4" x2="436.0" y2="623.4" stroke="#B6493A" stroke-width="5"/>
+<line x1="404.0" y1="340.9" x2="436.0" y2="340.9" stroke="#B6493A" stroke-width="5"/>
+<rect x="406.0" y="468.1" width="28.0" height="28.0" fill="#B6493A" stroke="#B6493A" stroke-width="3"/>
+<circle cx="392.0" cy="425.0" r="12" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
+<rect x="408.0" y="470.8" width="24.0" height="24.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
+<polygon points="448.0,526.6 436.0,550.6 460.0,550.6" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="420.0" y="875.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >Order-axis</text>
+<text x="420.0" y="908.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >composite</text>
+<line x1="820.0" y1="514.3" x2="820.0" y2="293.2" stroke="#B6493A" stroke-width="5"/>
+<line x1="804.0" y1="514.3" x2="836.0" y2="514.3" stroke="#B6493A" stroke-width="5"/>
+<line x1="804.0" y1="293.2" x2="836.0" y2="293.2" stroke="#B6493A" stroke-width="5"/>
+<rect x="806.0" y="389.8" width="28.0" height="28.0" fill="#B6493A" stroke="#B6493A" stroke-width="3"/>
+<circle cx="792.0" cy="394.2" r="12" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
+<rect x="808.0" y="440.4" width="24.0" height="24.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
+<polygon points="848.0,352.9 836.0,376.9 860.0,376.9" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="820.0" y="875.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >Tail-axis</text>
+<text x="820.0" y="908.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >composite</text>
+<line x1="1220.0" y1="792.2" x2="1220.0" y2="163.0" stroke="#B6493A" stroke-width="5"/>
+<line x1="1204.0" y1="792.2" x2="1236.0" y2="792.2" stroke="#B6493A" stroke-width="5"/>
+<line x1="1204.0" y1="163.0" x2="1236.0" y2="163.0" stroke="#B6493A" stroke-width="5"/>
+<rect x="1206.0" y="463.7" width="28.0" height="28.0" fill="#B6493A" stroke="#B6493A" stroke-width="3"/>
+<circle cx="1192.0" cy="344.4" r="12" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
+<rect x="1208.0" y="480.3" width="24.0" height="24.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
+<polygon points="1248.0,584.4 1236.0,608.4 1260.0,608.4" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="1220.0" y="875.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >Difference-of-</text>
+<text x="1220.0" y="908.0" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" text-anchor="middle" fill="#1F2933" >differences</text>
+<text x="1270.0" y="376.7" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#52606D" >retrospective +/-0.01 region</text>
+<circle cx="250.0" cy="960.0" r="10" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="272.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >seed 42</text>
+<rect x="430.0" y="950.0" width="20.0" height="20.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
+<text x="462.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >seed 1337</text>
+<polygon points="670.0,950.0 660.0,970.0 680.0,970.0" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
+<text x="692.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >seed 20260703</text>
+<rect x="970.0" y="950.0" width="20.0" height="20.0" fill="#B6493A" stroke="#B6493A" stroke-width="3"/>
+<text x="1002.0" y="968.0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#1F2933" >mean and descriptive 95% interval</text>
+</svg>

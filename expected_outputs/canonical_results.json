@@ -1,0 +1,16 @@
+{
+  "difference_of_differences_mean": -0.00066,
+  "gate_below_fraction": 0.2085922434111849,
+  "gate_box_eligible_rows": 9334,
+  "gate_rows_below_0_999": 1947,
+  "historical_magnitude_rule": 0.0171,
+  "order_axis_ci95_high": 0.01107,
+  "order_axis_ci95_low": -0.01315,
+  "order_axis_mean": -0.00104,
+  "original_evaluation_mean": -0.0091115306,
+  "source_excluded_mean": -0.009414408442,
+  "source_exclusion_change": -0.000302877842,
+  "tail_axis_mean": 0.00567,
+  "validation_protocol_mean": 0.01006,
+  "validation_three_seed_mean": 0.009116666666666667
+}

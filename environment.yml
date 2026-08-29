@@ -1,0 +1,7 @@
+name: lp-ccad-analytical-replay
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pillow=10
+  - librsvg
