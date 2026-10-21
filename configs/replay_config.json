@@ -8,5 +8,28 @@
     "VAL_H2_42",
     "VAL_H2_1337",
     "VAL_H2_20260703"
-  ]
+  ],
+  "recomputation": {
+    "contrast_arms": [
+      "C4-M",
+      "C4MixFT-M"
+    ],
+    "evaluation_route_seeds": [
+      42,
+      1337
+    ],
+    "route_2019_estimand": "primary",
+    "followup_cells": [
+      "mono_single",
+      "mono_mixed",
+      "shuf_single",
+      "shuf_mixed"
+    ],
+    "followup_seeds": [
+      42,
+      1337,
+      20260703
+    ],
+    "paired_t_critical_0975_df2": 4.302652729911275
+  }
 }

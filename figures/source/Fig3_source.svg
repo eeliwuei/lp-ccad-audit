@@ -25,13 +25,13 @@
 <text x="150.0" y="95.0" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#1F2933" >A. Development validation</text>
 <text x="1030.0" y="95.0" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start" fill="#1F2933" >B. Evaluation-composition sensitivity</text>
 <circle cx="280.0" cy="205.3" r="15" fill="#236A8A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="280.0" y="177.3" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.011590</text>
+<text x="280.0" y="177.3" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.01159</text>
 <text x="280.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 42</text>
 <rect x="485.0" y="240.0" width="30.0" height="30.0" fill="#D07922" stroke="#FFFFFF" stroke-width="3"/>
-<text x="500.0" y="227.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.008530</text>
+<text x="500.0" y="227.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.00853</text>
 <text x="500.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 1337</text>
 <polygon points="720.0,261.0 705.0,291.0 735.0,291.0" fill="#2F855A" stroke="#FFFFFF" stroke-width="3"/>
-<text x="720.0" y="248.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.007230</text>
+<text x="720.0" y="248.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="middle" fill="#1F2933" >+0.00723</text>
 <text x="720.0" y="930.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="500" text-anchor="middle" fill="#1F2933" >seed 20260703</text>
 <text x="720.0" y="966.0" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400" text-anchor="middle" fill="#52606D" >post hoc</text>
 <line x1="1170.0" y1="302.6" x2="1510.0" y2="309.7" stroke="#236A8A" stroke-width="4"/>

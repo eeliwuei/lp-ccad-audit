@@ -12,4 +12,4 @@
 
 The exact schedule YAMLs are also provided under `configs/frozen_protocol/` and `configs/factorial_schedules/`. Schedule release supports configuration inspection; it does not resolve the one-to-one confounding between v3 schedule realization and training seed or reproduce training.
 
-No raw image or video media, source-identifying filename list, ground-truth annotation file, per-image prediction file, or checkpoint is included.
+No raw image or video media, source-identifying filename list, ground-truth annotation file, per-image prediction file, or checkpoint is included in this package. S7 Data, a separate Supporting Information file released with the first revision, now provides image-level identifiers (provider, provider path, SHA-256 digest, size, and per-class box counts) for every image in the training, validation, and evaluation splits.

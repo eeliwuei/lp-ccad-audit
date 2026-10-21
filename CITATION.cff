@@ -7,7 +7,7 @@ authors:
     given-names: "Wei"
   - family-names: "Jang"
     given-names: "Seojin"
-version: "2.0.2"
+version: "2.1.0"
 repository-code: "https://github.com/eeliwuei/lp-ccad-audit"
 abstract: "Portable analytical replay and figure-generation materials for the LP-CCAD multi-axis confirmation audit. No raw media or end-to-end training reproduction is included."
 keywords:

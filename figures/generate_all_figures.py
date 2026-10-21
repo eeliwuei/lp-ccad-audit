@@ -203,7 +203,7 @@ def make_fig3(rows: list[dict[str, str]]) -> tuple[Path, Path]:
     xs = [280, 500, 720]
     for x, (seed, val, color, shape) in zip(xs, seed_data):
         p.append({"circle": circle, "square": square, "triangle": triangle}[shape](x, y(val), 15, color))
-        p.append(text(x, y(val)-28, f"{val:+.6f}", 24, 600, "middle"))
+        p.append(text(x, y(val)-28, f"{val:+.5f}", 24, 600, "middle"))  # archived at five decimals
         p.append(text(x, 930, f"seed {seed}", 24, 500, "middle"))
         if seed == "20260703":
             p.append(text(x, 966, "post hoc", 21, 400, "middle", MUTED))

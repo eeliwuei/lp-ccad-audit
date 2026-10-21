@@ -33,6 +33,9 @@ optimization dose. The v3 schedule realizations are bound one-to-one to
 training seeds, not crossed over seeds. Resampling remains conditional on
 already-trained models and uses filename-derived groups. The TOST configuration
 is retrospective and is not evidence of prespecification or equivalence.
+The note "source-identifying records intentionally omitted" in the
+`evidence_boundary` field describes this file only; S7 Data, released with the
+first revision, now provides image-level identifiers.
 
 Historical archive paths containing the former `rights_clean` filename are
 retained only as immutable provenance locators; they are not current dataset
